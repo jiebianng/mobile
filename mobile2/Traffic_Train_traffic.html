@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title></title>
+    <!-- Basic Page Needs
+     ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metass
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body class="color_body">
+<!--处理加载状态 start-->
+<div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+    <div style="display: table;width: 100%;height: 100%;">
+        <div style="display: table-cell;vertical-align: middle;">
+            <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var he = document.documentElement.clientHeight;//高
+    var _id = document.getElementById('PageLoadingState');
+    _id.style.height=he+'px';
+    document.onreadystatechange=function(){
+        if(document.readyState=='complete'){
+            document.getElementById('PageLoadingState').style.display='none';
+        }
+    }
+</script>
+<!--处理加载状态 end-->
+<!--顶部展示栏 start-->
+<div class="templates_Head" data-current="10" data-template="tj_all_index_head"></div>
+<!--顶部展示栏 end-->
+<div class="Traffic_Train_traffic_mi mt-13">
+    <img src="public/images/Traffic_Train_traffic_miba.jpg" alt="" width="100%"/>
+    <div class="tj_all_poz">
+        <span class="_span1">成都市环球中心</span>
+        <span class="_span2">理县</span>
+        <span class="_span3">2015-04-03</span>
+        <a href="javascript:void (0)" class="_a1"><img src="public/images/Traffic_Train_traffic_icn1.png" alt="" width="100%"/></a>
+        <a href="javascript:void (0)" class="_a2"><img src="public/images/Traffic_Train_traffic_icn2.png" alt="" width="100%"/></a>
+        <a href="Traffic_Result.html" class="_a3">
+            <img src="public/images/Traffic_Train_traffic_btn.png" alt="" width="100%" class="N_has"/>
+            <img src="public/images/Traffic_Train_traffic_btnCur.png" alt="" width="100%" class="N_cur"/>
+        </a>
+    </div>
+</div>
+<div class="Traffic_ul_back mb-10">
+    <ul>
+        <li>
+            <img src="public/images/Traffic_ul_liback.png" alt="" width="100%"/>
+            <div class="tj_all_poz">
+                <a href="javascript:void (0)" class="_img"><img src="public/images/Traffic_ul_backLi1.jpg" alt="" width="100%"/></a>
+            </div>
+        </li>
+        <li>
+            <img src="public/images/Traffic_ul_liback.png" alt="" width="100%"/>
+            <div class="tj_all_poz">
+                <a href="javascript:void (0)" class="_img"><img src="public/images/Traffic_ul_backLi2.jpg" alt="" width="100%"/></a>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--底部导航栏 start-->
+<div class="templates_Footer" data-current="5" data-template="tj_All_footerDetails"></div>
+<!--底部导航栏 end-->
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+<script type="text/javascript">
+    seajs.use("./public/templates/control/Traffic_Train_traffic.js",function(temp){
+        temp.Query();
+    });
+</script>
+</body>

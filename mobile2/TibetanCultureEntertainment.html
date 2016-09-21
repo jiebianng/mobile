@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title></title>
+    <!-- Basic Page Needs
+     ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metass
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body class="color_body1">
+<!--处理加载状态 start-->
+<div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+    <div style="display: table;width: 100%;height: 100%;">
+        <div style="display: table-cell;vertical-align: middle;">
+            <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var he = document.documentElement.clientHeight;//高
+    var _id = document.getElementById('PageLoadingState');
+    _id.style.height=he+'px';
+    document.onreadystatechange=function(){
+        if(document.readyState=='complete'){
+            document.getElementById('PageLoadingState').style.display='none';
+        }
+    }
+</script>
+<!--处理加载状态 end-->
+<!--顶部展示栏 start-->
+<div class="templates_Head" data-current="18" data-template="tj_all_index_head"></div>
+<!--顶部展示栏 end-->
+<div class="tj_All_Carousel mt-13">
+</div>
+<div class="TibetanCulture_topConBack TibetanCultureEntertainment_back current">
+    <img src="public/images/TibetanCultureEntertainment_back.jpg" alt="" width="100%" class="bnt2"/>
+    <div class="tj_all_poz">
+        <a href="TibetanCulture.html" class="_a1"></a>
+        <a href="LiCommunity.html" class="_a2"></a>
+        <a href="javascript:void (0)" class="_a3"></a>
+        <a href="javascript:void (0)" class="_a4"></a>
+        <a href="javascript:void (0)" class="_a5"></a>
+        <a href="javascript:void (0)" class="_a6"></a>
+    </div>
+</div>
+<div class="View_intro_List_imgShowBack">
+    <img src="public/images/View_intro_List_imgtilez1.png" alt="" height="20"/>
+    <a href="javascript:void(0)" class="tj_fr"><img src="public/images/tj_all_icon_Into.png" alt="" height="20"/></a>
+    <ul class="TopCon clearfix">
+
+        <li>
+            <img src="public/images/View_intro_List_li1.jpg" alt="" width="94%"/>
+            <h3 class="_h3">桃坪羌寨</h3>
+        </li>
+        <li>
+            <img src="public/images/View_intro_List_li1.jpg" alt="" width="94%"/>
+            <h3 class="_h3">桃坪羌寨</h3>
+        </li>
+        <li>
+            <img src="public/images/View_intro_List_li1.jpg" alt="" width="94%"/>
+            <h3 class="_h3">桃坪羌寨</h3>
+        </li>
+        <li>
+            <img src="public/images/View_intro_List_li1.jpg" alt="" width="94%"/>
+            <h3 class="_h3">桃坪羌寨</h3>
+        </li>
+    </ul>
+</div>
+<div class="View_intro_List_imgShowBack" style="height: 60px">
+    <img src="public/images/View_intro_List_imgtilez2.png" alt="" height="20"/>
+    <a href="LiCommunity.html" class="tj_fr"><img src="public/images/tj_all_icon_Into.png" alt="" height="20"/></a>
+</div>
+<ul class="tj_All_Store_Li_cont mb-10">
+
+</ul>
+<!--底部导航栏 start-->
+<div class="templates_Footer" data-current="5" data-template="tj_All_footerDetails"></div>
+<!--底部导航栏 end-->
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+<script type="text/javascript">
+//    处理轮播
+    seajs.use("./public/templates/js/swiper.js",function(temp){
+        temp.tj_All_Carousel('page2');
+    });
+//    处理藏羌文化
+    seajs.use("./public/templates/control/TibetanCultureEntertainment.js",function(temp){
+        temp.ErgodicData();
+    });
+//    处理理县社区
+    seajs.use("./public/templates/control/LiCommunity.js",function(temp){
+        temp.ErgodicData();
+    });
+</script>
+</body>

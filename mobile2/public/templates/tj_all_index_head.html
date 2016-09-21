@@ -1,0 +1,206 @@
+<div class="tj_all_index_head">
+    <img src="public/images/tj_top_head.png" alt="" width="100%"/>
+    <div class="tj_All_cont">
+        <a href="javascript:history.go(-1);"><img src="public/images/tj_all_Prev.png" alt="" height="40%" class="le"/></a>
+        <img src="public/images/tj_top_head_s1.png" alt="" height="20%"/>
+        <img src="public/images/tj_top_head_t1.png" alt="" height="40%" class="curCont"/>
+        <img src="public/images/tj_top_head_s1.png" alt="" height="20%"/>
+        <a href=""><img src="public/images/tj_top_head_ri1.png" alt="" height="40%" class="ri"/></a>
+    </div>
+</div>
+<script type="text/javascript">
+    /**
+     *
+     * cur 1代表“首页”、2“广场”、3“服务”、4“分类”、5“个人中心”、6“理县社区”、7“景点视频”
+     * 8“理县景点”、9“交通”、10“车次查询”、11“查询结果”、12“酒店住宿”、13“景点详情”、14“景点介绍列表”
+     * 15“旅游攻略”、16“意见反馈”、17“购物车”、18“藏羌文化”、19“新闻活动”
+     *
+     */
+    var _head=$('.templates_Head');
+    var cur =parseInt(_head.attr("data-current"));
+//    有返回按钮
+    function All_hide1(){
+        _head.find(".tj_all_index_head .ri").hide();
+        _head.find(".tj_all_index_head .le").show();
+    }
+    if(cur==1){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t.png"
+        }).css({
+            "height":"60%",
+            "margin-top":"3%"
+        });
+        _head.find(".tj_all_index_head .ri").hide();
+    }
+//    地图
+    else if(cur==26){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t.png"
+        }).css({
+            "height":"60%",
+            "margin-top":"3%"
+        });
+        All_hide1();
+    }
+    else if(cur==2){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t1.png"
+        });
+    }
+    else if(cur==3){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t1.png"
+        });
+    }
+    else if(cur==4){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t1.png"
+        });
+        All_hide1();
+    }
+    else if(cur==5){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t1.png"
+        });
+    }
+    else if(cur==6){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t6.png"
+        });
+        All_hide1();
+    }
+    else if(cur==7){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t7.png"
+        });
+        All_hide1();
+    }
+    else if(cur==8){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t8.png"
+        });
+        All_hide1();
+    }
+    else if(cur==9){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t9.png"
+        });
+        All_hide1();
+    }
+    else if(cur==10){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t10.png"
+        });
+        All_hide1();
+    }
+    else if(cur==10){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t10.png"
+        });
+        All_hide1();
+    }
+    else if(cur==11){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t11.png"
+        });
+        All_hide1();
+    }
+    else if(cur==12){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t12.png"
+        });
+        All_hide1();
+    }
+    else if(cur==13){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t13.png"
+        });
+        All_hide1();
+    }
+    else if(cur==14){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t14.png"
+        });
+        All_hide1();
+    }
+    else if(cur==15){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t15.png"
+        });
+        All_hide1();
+    }
+    else if(cur==16){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t16.png"
+        });
+        All_hide1();
+    }
+    else if(cur==17){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t17.png"
+        });
+        All_hide1();
+    }
+    else if(cur==18){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t18.png"
+        });
+        All_hide1();
+    }
+    else if(cur==19){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t19.png"
+        });
+        All_hide1();
+    }
+//    我的订单
+    else if(cur==20){
+        _head.find(".curCont").attr({
+            "src":"public/images/cx_wddd.png"
+        });
+        All_hide1();
+    }
+//    订单确认
+    else if(cur==21){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t21.png"
+        });
+        All_hide1();
+    }
+//    藏家楼
+    else if(cur==22){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t22.png"
+        });
+        All_hide1();
+    }
+
+//    攻略详情
+    else if(cur==23){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t23.png"
+        });
+        All_hide1();
+    }
+//    支付方式
+    else if(cur==24){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t24.png"
+        });
+        All_hide1();
+    }
+//    餐馆名称
+    else if(cur==25){
+        _head.find(".curCont").attr({
+            "src":"public/images/tj_top_head_t25.png"
+        });
+        All_hide1();
+    }
+//    藏歌会
+    else if(cur==27){
+        _head.find(".curCont").attr({
+            "src":"public/images/cx_zgh.png"
+        });
+        All_hide1();
+    }
+</script>

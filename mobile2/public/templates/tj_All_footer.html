@@ -1,0 +1,144 @@
+<div class="tj_All_footer">
+    <!--<img src="public/images/tj_all_footerBack.png" alt="" width="100%"/>-->
+    <img src="public/images/tj_all_footerBack_cont.png" alt="" width="100%"/>
+    <div class="tj_All_cont">
+        <img src="public/images/tj_all_footerBack_cont.png" alt="" width="100%"/>
+        <ul class="footer_ul clearfix">
+            <li>
+                <a href="index.html">
+                    <img src="public/images/tj_All_footer_li_1.png" alt="" width="80%" class="img"/>
+                    <img src="public/images/tj_All_footer_liCur_1.png" alt="" width="80%" class="imgCur"/>
+                </a>
+            </li>
+            <li>
+                <a href="LiCommunity.html">
+                    <img src="public/images/tj_All_footer_li_2.png" alt="" width="80%" class="img"/>
+                    <img src="public/images/tj_All_footer_liCur_2.png" alt="" width="80%" class="imgCur"/>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="public/images/tj_All_footer_li_5.png" alt="" width="80%" class="img"/>
+                    <img src="public/images/tj_All_footer_liCur_5.png" alt="" width="80%" class="imgCur Service"/>
+                </a>
+            </li>
+            <li>
+                <a href="cx_fenlei.html">
+                    <img src="public/images/tj_All_footer_li_3.png" alt="" width="80%" class="img"/>
+                    <img src="public/images/tj_All_footer_liCur_3.png" alt="" width="80%" class="imgCur"/>
+                </a>
+            </li>
+            <li>
+                <a href="Personal.html">
+                    <img src="public/images/tj_All_footer_li_4.png" alt="" width="80%" class="img"/>
+                    <img src="public/images/tj_All_footer_liCur_4.png" alt="" width="80%" class="imgCur"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="tj_All_footerPopup">
+    <div class="Top">
+        <div class="topImg">
+            <img src="public/images/tj_All_footerpopup.png" alt="" width="100%"/>
+            <div class="searchBast">
+                <div class="SearchImg">
+                <img src="public/images/tj_All_footerpopupSearch.png" alt="" width="85%"/>
+                    <input type="text" class="SearchInput"/>
+                </div>
+                <img src="public/images/tj_All_footerpopupSearchPla.png" alt="" width="50%" class="SearchPlaImg"/>
+                <img src="public/images/tj_All_footerpopupEsc.jpg" alt="" width="10%" class="EscImg"/>
+            </div>
+        </div>
+        <ul class="middle clearfix">
+            <li>
+                <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                <a href="javascript:void (0)" class="middle_a"><img src="public/images/tj_All_footerpopup_li_1.png" alt="" width="80%"/></a>
+            </li>
+            <li>
+                <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                <a href="javascript:void (0)" class="middle_a"><img src="public/images/tj_All_footerpopup_li_2.png" alt="" width="80%"/></a>
+            </li>
+            <li>
+                <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                <a href="javascript:void (0)" class="middle_a"><img src="public/images/tj_All_footerpopup_li_3.png" alt="" width="80%"/></a>
+            </li>
+            <li>
+                <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                <a href="javascript:void (0)" class="middle_a"><img src="public/images/tj_All_footerpopup_li_4.png" alt="" width="80%"/></a>
+            </li>
+            <li>
+                <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                <a href="javascript:void (0)" class="middle_a"><img src="public/images/tj_All_footerpopup_li_5.png" alt="" width="80%"/></a>
+            </li>
+            <li>
+                <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                <a href="javascript:void (0)" class="middle_a"><img src="public/images/tj_All_footerpopup_li_6.png" alt="" width="80%"/></a>
+            </li>
+        </ul>
+        <div class="bot">
+            <ul class="middle clearfix">
+                <li>
+                    <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                </li>
+                <li>
+                    <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                 </li>
+                <li>
+                    <img src="public/images/tj_index_back.jpg" alt="" width="100%"/>
+                 </li>
+            </ul>
+            <div class="botCont">
+                <img src="public/images/tj_All_footerpopupLine.png" alt="" width="100%"/>
+                <a href="javascript:void (0)" class="PrbtnClick">
+                    <img src="public/images/tj_All_footerpopupBtn.png" alt="" width="50%" class="Prbtn"/>
+                    <img src="public/images/tj_All_footerpopupBtnCur.png" alt="" width="50%" class="PrbtnCur"/>
+                </a>
+                <p class="P">此按钮将一键拨打理县派出所电话，请在紧急情况下使用。</p>
+            </div>
+        </div>
+        <img src="public/images/tj_All_footerpopup_bot.png" alt="" width="100%" class="tj_All_footerpopup_bot"/>
+    </div>
+</div>
+<script type="text/javascript">
+    /**
+     *
+     * _foot_cur 1代表“首页”、2“广场”、3“服务”、4“分类”、5“个人中心”
+     *
+     */
+    var _foot=$('.templates_Footer');
+    var _foot_cur =parseInt(_foot.attr("data-current"));
+    _foot.find(".footer_ul li").eq(_foot_cur-1).addClass("current");
+    var he = document.documentElement.clientHeight;//高
+    _foot.find(".tj_All_footerPopup").css({
+        "height":he+"px"
+    });
+//      弹出一键救援界面
+    var _btn = _foot.find(".Service").parent();
+    _btn.click(function(){
+        _foot.find(".tj_All_footerPopup").show();
+    });
+//      退出界面
+    _foot.find(".tj_All_footerPopup .EscImg").click(function(){
+        $(".tj_All_footerPopup").hide();
+    });
+//    输入框获得焦点
+    _foot.find(".SearchInput").focus(function(){
+        _foot.find(".SearchPlaImg").hide();
+    });
+//    输入框失去焦点
+    _foot.find(".SearchInput").blur(function(){
+        var _this = $(this);
+        if(_this.val()==''){
+            _foot.find(".SearchPlaImg").show();
+        }
+    });
+//    点击其它区域隐藏弹出层
+    _foot.find(".tj_All_footerPopup").click(function(){
+        $(".tj_All_footerPopup").hide();
+    });
+//    阻止事件冒泡
+    _foot.find(".tj_All_footerPopup .Top").click(function(e){
+        e.stopPropagation();
+    });
+</script>

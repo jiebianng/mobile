@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑收货地址</title>
+    <!--阻止浏览器缓存-->
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <!-- Basic Page Needs
+     ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- js
+    ================================================== -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/validform.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<div class="tjAllHead">
+    <div class="clearfix">
+        <a href="javascript:history.go(-1)" class="fl fo-se-13 mt-1 fo-co-3 z-index-100">&nbsp;&nbsp;<img src="images/icon-return.png" style="width: 1.2rem;vertical-align: bottom;" alt=""></a>
+        <div class="title">编辑收货地址</div>
+        <a href="#" class="Bri"></a>
+    </div>
+</div>
+<form class="pt-5 bt-1 registerform">
+    <div class="body-back-2 bb-1 ov-hi">
+        <div class="te-cell wh-no fo-se-15 pad1 ve-mi">
+            <p>收货人：</p>
+        </div>
+        <div class="te-cell wh-no fo-se-15 ve-mi">
+            <input type="text" class="form-control2" value="翠花" datatype="nl" nullmsg="请输入收货人姓名" errormsg="收货人姓名为1-30个字符">
+        </div>
+    </div>
+    <div class="body-back-2 bb-1 ov-hi">
+        <div class="te-cell wh-no fo-se-15 pad1 ve-mi">
+            <p>手机号码：</p>
+        </div>
+        <div class="te-cell wh-no fo-se-15 ve-mi">
+            <input type="text" class="form-control2" value="18202819709" datatype="phone" nullmsg="输入手机号码" errormsg="手机号码输入不正确">
+        </div>
+    </div>
+    <div class="body-back-2 bb-1 ov-hi">
+        <div class="pad1">
+            <a href="选择城市.html">
+                <div class="te-cell wh-no fo-se-15 pad1 pl-0 ve-mi">
+                    <p>所在地： <span class="ml-2">四川省绵阳市涪城区</span></p>
+                </div>
+                <div class="te-cell fo-se-15 pl-0 wi-1000 ve-mi te-ri">
+                    <p><img src="images/icon-rigin.png" alt="" style="height: 1.3rem;" class="ml-1"></p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="body-back-2 bb-1 ov-hi">
+        <div class="te-cell wh-no fo-se-15 pad1 ve-mi">
+            <p>详细地址：</p>
+        </div>
+        <div class="te-cell wh-no fo-se-15 ve-mi">
+            <input type="text" class="form-control2" value="绵安路35号" datatype="address" nullmsg="详细地址不能为空" errormsg="地址不能为空且为2-100字符">
+        </div>
+    </div>
+    <div class="body-back-2 bb-1 ov-hi">
+        <div class="pad1">
+            <div class="te-cell wh-no fo-se-15 pad1 pl-0 ve-mi">
+                <p>设置为默认地址</p>
+            </div>
+            <div class="te-cell fo-se-15 pl-0 wi-1000 ve-mi te-ri">
+                <nav class="segmented-control" style="width: 7rem;">
+                    <input type="radio" name="sc-2" id="sc-2-1" checked="checked">
+                    <input type="radio" name="sc-2" id="sc-2-2">
+                    <label for="sc-2-1"></label>
+                    <label for="sc-2-2"></label>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3 mb-2">
+        <div class="pad1">
+            <input type="submit" class="btnAll1 body-back-6" value="保存">
+        </div>
+    </div>
+</form>
+</body>
+</html>

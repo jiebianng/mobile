@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        /*----------------------全局变量 start--------------------------*/
+        body{overflow-x:hidden;font-family:"微软雅黑";font-size: 1em;background: url("public/images/cx_bg.png");}
+        ul{list-style-type:none;margin:0;padding:0;}
+        a{text-decoration:none;}
+        /*----------------------全局变量 end--------------------------*/
+        .header img{
+            width: 100%;
+            height: auto;
+        }
+        .header{
+            background: url("public/images/nav.png");
+            background-size: cover;
+            height: 6em;
+            text-align: center;
+        }
+        .header span{
+            float: right;
+            color: #b89d85;
+            font-size: 1.6em;
+            padding-right: 1em;
+            position: relative;
+            top: -0.3em;
+        }
+        .header_img2{
+            position: relative;
+            top: 3.8em;
+        }
+        .header_img3{
+            max-width:45%;
+            height: auto;
+            margin-top: -1em;
+            position: relative;
+            left: 1em;
+        }
+        .header_img4{
+            max-width: 9%;
+            position: absolute;
+            left: 10%;
+            top: 4%;
+        }
+        .cx_ddnav{
+            background: url("public/images/bgbg.png")no-repeat;
+            background-size: cover;
+            padding-top: 1.5em;
+        }
+        .cx_ddnav div{
+            display: inline-block;
+            text-align: center;
+            width: 24%;
+        }
+        .cx_ddnav p{
+            font-size: 1.5em;
+            padding-top: 0.3em;
+        }
+        .cx_ddnav img{
+            max-width: 35%;
+            height: auto;
+        }
+        .cx_qh{
+            background: url("public/images/bgbg.png")no-repeat;
+            background-size: cover;
+        }
+        .xq{
+            float: right;
+            font-size: 2.5em;
+            padding-right: 0.2em;
+        }
+        .cx_qhhead h4{
+          display: inline;
+            padding-left: 0.5em;
+        }
+        .cx_qhhead{
+            width: 92%;
+            margin: 0 auto;
+            border-bottom: 1px solid #946549;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        .cx_qh{
+            margin-top: 2em;
+            color: #946549;
+        }
+        .img_news{
+            width: 92%;
+            margin:  0 auto;
+            border-bottom: 1px solid #946549;
+            padding-top: 1em;
+            padding-left: 0.5em;
+            padding-bottom: 1em;
+        }
+        .img_news img{
+            width: 6em;
+            height: 6em;
+            float: left;
+        }
+        .news_img{
+            float: left;
+            padding-left: 0.5em;
+            margin-top: -0.6em;
+        }
+        .right_news{
+            float: right;
+            text-align: center;
+            position: relative;
+            top: -0.5em;
+        }
+        .right_news h5{
+            font-size: 1.8em;
+            color: #e76f16;
+        }
+        .right_news span{
+            font-size: 1.58em;
+        }
+        .cx_kbd{
+            border-bottom: 1px solid #946549;
+            padding-top: 1em;
+            width: 92%;
+            margin: 0 auto;
+        }
+        .cx_kbd span{
+            color: #e76f16;
+
+        }
+        .cx_kbd p{
+            font-size: 1.6em;
+            text-align: right;
+            padding-right: 1em;
+        }
+        .cx_jz img{
+            max-width: 25%;
+            height: auto;
+        }
+        .cx_jz p{
+            text-align: right;
+            padding-right: 1.5em;
+            line-height: 5em;
+        }
+        .cx_jz span{
+            font-size: 1.8em;
+            padding-right: 1em;
+            position: relative;
+            top: 0.2em;
+        }
+        .cx_active2{
+            color: #e76f16;
+        }
+        .cx_qh{
+            display: none;
+        }
+
+    </style>
+<body>
+<!--处理加载状态 start-->
+<div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+    <div style="display: table;width: 100%;height: 100%;">
+        <div style="display: table-cell;vertical-align: middle;">
+            <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var he = document.documentElement.clientHeight;//高
+    var _id = document.getElementById('PageLoadingState');
+    _id.style.height=he+'px';
+    document.onreadystatechange=function(){
+        if(document.readyState=='complete'){
+            document.getElementById('PageLoadingState').style.display='none';
+        }
+    }
+</script>
+<!--处理加载状态 end-->
+<!--顶部展示栏 start-->
+<div class="templates_Head" data-current="20" data-template="tj_all_index_head"></div>
+<!--顶部展示栏 end-->
+
+<div class="cx_ddnav  mt-15">
+    <div>
+        <img src="public/images/cx_d1.png" alt=""/>
+        <p>待付款</p>
+    </div>
+    <div>
+        <img src="public/images/cx_d2.png" alt=""/>
+        <p>待发货</p>
+    </div>
+    <div>
+        <img src="public/images/cx_d3.png" alt=""/>
+        <p>待收款</p>
+    </div>
+    <div>
+        <img src="public/images/cx_d4.png" alt=""/>
+        <p>待评价</p>
+    </div>
+</div>
+<div class="cx_qh">
+    <div class="cx_qhhead">
+      <h4>店铺名称：</h4>
+      <span class="glyphicon glyphicon-menu-right xq" aria-hidden="true"></span>
+    </div>
+    <div class="img_news">
+        <img src="public/images/sp.png" alt=""/>
+        <div class="news_img">
+            <h4>西藏耗牛梳子么么哒</h4>
+            <p>小号 10cm</p>
+        </div>
+        <div class="right_news">
+            <h5>￥68</h5>
+            <span>X1</span>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="cx_kbd">
+        <p>共一件商品 实付：<span>￥68.00</span></p>
+    </div>
+    <div class="cx_jz">
+        <p><span>取消订单</span><a href="cx_zffs.html"><img src="public/images/cx_qjs.png" alt=""/></a></p>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+
+
+<div class="cx_qh">
+    <div class="cx_qhhead">
+        <h4>店铺名称：</h4>
+        <span class="glyphicon glyphicon-menu-right xq" aria-hidden="true"></span>
+    </div>
+    <div class="img_news">
+        <img src="public/images/sp.png" alt=""/>
+        <div class="news_img">
+            <h4>西藏耗牛梳子么么哒</h4>
+            <p>小号 10cm</p>
+        </div>
+        <div class="right_news">
+            <h5>￥68</h5>
+            <span>X1</span>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="cx_kbd">
+        <p>共一件商品 实付：<span>￥68.00</span></p>
+    </div>
+    <div class="cx_jz">
+        <p><span>取消订单</span>
+            <img src="public/images/cx_txfh.png" alt=""/>
+        </p>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="cx_qh">
+    <div class="cx_qhhead">
+        <h4>店铺名称：</h4>
+        <span class="glyphicon glyphicon-menu-right xq" aria-hidden="true"></span>
+    </div>
+    <div class="img_news">
+        <img src="public/images/sp.png" alt=""/>
+        <div class="news_img">
+            <h4>西藏耗牛梳子么么哒</h4>
+            <p>小号 10cm</p>
+        </div>
+        <div class="right_news">
+            <h5>￥68</h5>
+            <span>X1</span>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="cx_kbd">
+        <p>共一件商品 实付：<span>￥68.00</span></p>
+    </div>
+    <div class="cx_jz">
+        <p>
+            <img src="public/images/cx_wlzz.png" alt=""/>
+        </p>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="cx_qh">
+    <div class="cx_qhhead">
+        <h4>店铺名称：</h4>
+        <span class="glyphicon glyphicon-menu-right xq" aria-hidden="true"></span>
+    </div>
+    <div class="img_news">
+        <img src="public/images/sp.png" alt=""/>
+        <div class="news_img">
+            <h4>西藏耗牛梳子么么哒</h4>
+            <p>小号 10cm</p>
+        </div>
+        <div class="right_news">
+            <h5>￥68</h5>
+            <span>X1</span>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <div class="cx_kbd">
+        <p>共一件商品 实付：<span>￥68.00</span></p>
+    </div>
+    <div class="cx_jz">
+        <p><span>删除</span>
+
+            <img src="public/images/cx_zcgm.png" alt=""/>
+            <img src="public/images/cx_pj.png" alt=""/>
+        </p>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+<!--底部导航栏 start-->
+<div class="templates_Footer" data-current="5" data-template="tj_All_footerDetails"></div>
+<!--底部导航栏 end-->
+
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+
+<script>
+    seajs.use("./public/templates/js/cx_ddqr",function(s){
+        s.fontcolor1()
+    })
+</script>
+</body>
+</html>

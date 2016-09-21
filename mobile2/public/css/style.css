@@ -1,0 +1,1755 @@
+/*----------------------全局变量 start--------------------------*/
+body{overflow-x:hidden;font-family:"微软雅黑";font-size: 1em;}
+ul{list-style-type:none;margin:0;padding:0;}
+a{text-decoration:none;color:#333;}
+a:active,a:hover,a:link{text-decoration:none;color:#333;}
+*{-webkit-tap-highlight-color: transparent; -webkit-appearance: none;}
+.mb-8{margin-bottom: 8%;}
+.mb-10{margin-bottom: 10%;}
+.mb-28{margin-bottom: 20%;}
+.mb-32{margin-bottom: 32%;}
+.mt-5{margin-top: 5%;}
+.mt-8{margin-top: 8%;}
+.mt-13{margin-top: 13%;}
+.mt-15{margin-top: 15%;}
+.mt-20{margin-top: 20%;}
+.tj_pa_20{padding: 20px;}
+.tj_pa_15{padding: 15px;}
+.tj_pa_10{padding: 10px;}
+.tj_fl{float: left;}
+.tj_fr{float: right;}
+.tj_ve_top{vertical-align:top;}
+.f_size_2{font-size: 2em;color: #dc7a10;}
+.f_size_2_line{font-size: 2em;text-decoration: line-through;}
+.f_size_2_Col{font-size: 2em;color: #000;}
+.f_size_2N{font-size: 2em;color: #8e6350;}
+.color_body1{background-color: #d2beaa;}
+.color_body2{background-color: #e2cbb6;}
+.color_body{background: url("../images/tj_all_body_back.jpg");background-size: 100%;}
+/*----------------------全局变量 end--------------------------*/
+.tj_all_index_head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999999;
+}
+.tj_All_Con_hide{
+    width: 100%;
+    overflow: hidden;
+}
+.tj_All_po{
+    position: relative;
+    height: 100%;
+}
+.tj_All_cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.tj_all_index_head .tj_All_cont img{
+    vertical-align: middle;
+    margin-top: 5%;
+}
+.tj_all_index_head .ri{
+    position: absolute;
+    right: 5px;
+    bottom: 35%;
+    margin: 0;
+    opacity: .5;
+}
+.tj_all_index_head .le{
+    position: absolute;
+    left: 5px;
+    bottom: 35%;
+    display: none;
+    margin: 0;
+}
+.tj_all_index_Cont2{
+    position: relative;
+}
+.tj_all_index_Cont2 .con2_ti{
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    width: 40%;
+    opacity: .9;
+}
+.tj_all_index_Cont2 .con2_ti_con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    color: #e3c3a3;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.tj_all_index_Cont2 .con2_ri{
+    position: absolute;
+    bottom: 18%;
+    right: 0;
+    width: 28%;
+    height: 20%;
+    text-align: left;
+    color: #e3c3a3;
+}
+.tj_all_index_Cont2 .con2_ri p{
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+.tj_index_back_Ul{
+    width: 101.5%;
+    overflow: hidden;
+    position: relative;
+}
+.tj_index_back_Ul li{
+    position: relative;
+    float: left;
+    width: 33.3%;
+}
+.tj_index_back_Ul li:active .noCur{
+    display: none;
+}
+.tj_index_back_Ul li:active .Cur{
+    display: block;
+}
+.tj_index_back_Ul li .Cur{
+    display: none;
+}
+.tj_index_back_Ul li .imgCon{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.tj_index_back_Ul li a{
+    display: block;
+    border-right: 2px solid #9f6941;
+    border-bottom: 2px solid #9f6941;
+}
+.tj_All_footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.tj_All_footer .tj_All_cont img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.tj_All_footer .footer_ul{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64%;
+}
+.tj_All_footer .footer_ul li{
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+.tj_All_footer .footer_ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.tj_All_footer .footer_ul li .img,.tj_All_footer .footer_ul li .imgCur{
+    position: relative;
+    padding-top: 16%;
+}
+.tj_All_footer .footer_ul li .img{
+   display: none;
+}
+.tj_All_footer .footer_ul .current .imgCur{
+    display: none;
+}
+.tj_All_footer .footer_ul .current .img{
+    display: inline-block;
+}
+.tj_All_footer .footer_ul li .Service{
+    padding-top: 0;
+    margin-top: -11%;
+}
+.tj_All_footerPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    z-index: 99999999;
+    background-color: rgba(0, 0, 0, 0.38);
+}
+.tj_All_footerPopup .Top{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999999;
+}
+.tj_All_footerPopup .middle{
+    width: 100%;
+    margin-top: -2%;
+}
+.tj_All_footerPopup .topImg{
+    position: relative;
+    z-index: 999999;
+}
+.tj_All_footerPopup .middle li{
+    text-align: center;
+    position: relative;
+    float: left;
+    width: 33.3%;
+}
+.tj_All_footerPopup .middle_a{
+    position: absolute;
+    top: 10%;
+    left: 0;
+}
+.tj_All_footerPopup .bot{
+    position: relative;
+}
+.tj_All_footerPopup .botCont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.tj_All_footerPopup .Prbtn,.tj_All_footerPopup .PrbtnCur{
+    margin-top: 2%;
+}
+.tj_All_footerPopup .PrbtnClick:active .PrbtnCur{
+    display: inline-block;
+}
+.tj_All_footerPopup .PrbtnClick:active .Prbtn{
+    display: none;
+}
+.tj_All_footerPopup .PrbtnCur{
+    display: none;
+}
+.tj_All_footerPopup .P{
+    padding: 0 2%;
+    color: #616161;
+    font-size: 1.2em;
+}
+.tj_All_footerPopup .tj_All_footerpopup_bot{
+    position: relative;
+    z-index: 999999;
+    margin-top: -14%;
+}
+.tj_All_footerPopup .searchBast{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+.tj_All_footerPopup .SearchImg{
+    position: absolute;
+    top: 20%;
+    left: 2%;
+}
+.tj_All_footerPopup .SearchPlaImg{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.tj_All_footerPopup .EscImg{
+    position: absolute;
+    top: 12%;
+    right: 1%;
+}
+.tj_All_footerPopup .SearchInput{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 81%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 6%;
+    z-index: 999999;
+    color: #9d8a78;
+    background: none;
+}
+.tj_all_index_head .tj_All_contSearch{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.tj_all_index_head .tj_All_contSearch img{
+    margin-top: 3%;
+}
+.tj_all_index_head .searchPla{
+    display: block;
+    position: absolute;
+    bottom: 39%;
+    width: 40%;
+    left: 16%;
+    margin: 0;
+    padding: 0;
+}
+.tj_all_index_head .searchInput{
+    position: absolute;
+    top: 22%;
+    left: 13%;
+    width: 73%;
+    height: 42%;
+    outline: none;
+    background:none;
+    border: none;
+    padding-left: 6%;
+    z-index: 999999;
+    color: #9d8a78;
+}
+.tj_All_Carousel{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.tj_All_Carousel .swiper-wrapper{
+    width: 100000px;
+    height: 100%;
+}
+.tj_All_Carousel li{
+    float: left;
+    height: 100%;
+}
+.tj_All_Carousel .swiper-pagination{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.tj_All_Carousel .swiper-pagination span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    background-color: #676767;
+    border-radius: 50%;
+}
+.tj_All_Carousel .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: #bababa;
+}
+.tj_All_Store_middle{
+    position: relative;
+    width: 100%;
+}
+.tj_All_Store_middle .cont{
+    position: absolute;
+    top: 23%;
+    right: 0;
+    width: 76%;
+    height: 32%;
+    text-align: center;
+}
+.tj_All_Store_middle .cont li{
+    display: inline-block;
+    width: 20%;
+    margin-right: 2%;
+}
+.tj_All_Store_middle .cont li .imgCur{
+    display: none;
+}
+.tj_All_Store_middle .cont .current .img{
+    display: none;
+}
+.tj_All_Store_middle .cont .current .imgCur{
+   display: inline-block;
+}
+.tj_All_Store_Li_cont{
+    width: 100%;
+}
+.tj_All_Store_Li_cont li{
+    position: relative;
+    width: 100%;
+}
+.tj_All_Store_Li_cont .b_con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.tj_All_Store_Li_cont .b_le{
+    position: absolute;
+    top: 3%;
+    left: 0;
+    width: 39%;
+    height: 100%;
+    overflow: hidden;
+}
+.tj_All_Store_Li_cont .b_ri{
+    position: absolute;
+    top: 8%;
+    right: 0;
+    width: 65%;
+    height: 80%;
+    overflow: hidden;
+}
+.tj_All_Store_Li_cont .b_ri h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+    color: #fff;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tj_All_Store_Li_cont .chan{
+    margin-top: 4%;
+}
+.tj_All_Store_Li_cont ._a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.tj_All_Store_Li_cont .ImgShow{
+    position: absolute;
+    top: 9%;
+    left: 7%;
+    width: 75%;
+    height: 72%;
+    overflow: hidden;
+}
+.tj_all_xin{
+    display: inline-block;
+    width: auto;
+    height: 15px;
+    margin-top: 3px;
+}
+.tj_all_xin li{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url("../images/tj_all_xin_No.png");
+    background-size: 100% 100%;
+}
+.tj_All_Store_Li_cont ._span{
+    font-size: 1.3em;
+    vertical-align: top;
+    color: #dc7a10;
+    line-height: 25px;
+}
+.tj_All_Store_Li_cont ._p{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tj_all_xin li.cur{
+    background: url("../images/tj_all_xin_Cur.png");
+    background-size: 100% 100%;
+}
+.tj_all_xin li.ban{
+    background: url("../images/tj_all_xin_Ban.png");
+    background-size: 100% 100%;
+}
+.tj_All_Store_Li_cont .iconLe{
+    float: left;
+    width: 50%;
+    vertical-align: bottom;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #8e6350;
+}
+.tj_All_Store_Li_cont .iconItm2{
+    margin-top: 4px;
+    height: 50px;
+}
+.tj_All_Store_Li_cont .iconRi{
+    float: right;
+    width: 50%;
+    vertical-align: bottom;
+    text-align: right;
+    padding-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #8e6350;
+}
+.tj_All_Store_Li_cont .color_span{
+    color: #8e6350;
+}
+.tj_All_Store_Li_cont ._peopleLength{
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 34%;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+    vertical-align: bottom;
+    padding-right: 8px;
+}
+.tj_All_Store_Li_cont ._p2{
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tj_All_btn_nc{
+    display: inline-block;
+    padding: 1px 3px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #6b4c2c;
+    border-radius: 4px;
+    color: #fff;
+}
+.tj_All_btn_nc.color1{
+    background-color: #dbbbb0;
+}
+.tj_All_btn_nc.color2{
+    background-color: #bd9c73;
+}
+.tj_All_btn_nc.color3{
+    background-color: #adb488;
+}
+.tj_All_timeShow{
+    position: relative;
+    z-index: 9999;
+    margin-top: -24px;
+    width: 100%;
+    height: 20px;
+    color: #fff;
+    padding: 0 10px;
+}
+.tj_All_timeShow_tiao{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: url("../images/tj_All_timeShow_tiao.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.tj_All_timeShow_dian{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+}
+.tj_All_timeShow_Contant{
+    position: relative;
+    width: 100%;
+}
+.tj_All_timeShow_Contant .Contant{
+    position: absolute;
+    top: 16%;
+    left: 20%;
+    width: 60%;
+    height: 72%;
+    text-align: center;
+}
+.tj_All_timeShow_Contant .Contant a:active .Cur{
+    display: inline-block;
+}
+.tj_All_timeShow_Contant .Contant a:active .Nur{
+    display: none;
+}
+.tj_All_timeShow_Contant .Contant .Cur{
+    display: none ;
+}
+.tj_All_timeShow_Contant .Contant a{
+    margin: 0 5px;
+}
+.tj_all_videoListShow{
+    width: 100%;
+    margin-top: 10px;
+}
+.tj_all_videoListShow li{
+    position: relative;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.tj_all_videoListShow .contLi{
+    position: absolute;
+    top: 8%;
+    left: 12%;
+    width: 76%;
+    height: 84%;
+    overflow: hidden;
+}
+.tj_All_timeShow_b_h3_img{
+    position: absolute;
+    bottom: -30%;
+    left: 10%;
+}
+.tj_All_timeShow_b_h3{
+    position: absolute;
+    bottom: -35%;
+    left: 15%;
+    width: 70%;
+    height: 20%;
+    font-size: 1.2em;
+    line-height: 2em;
+    color: #edc594;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tj_all_poz{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.View_intro_ListTilBack{
+    position: relative;
+    width: 100%;
+}
+.View_intro_ListTilBack ._a{
+    display: block;
+    float: left;
+    margin-top: 8%;
+    width: 25%;
+    height: 70%;
+}
+.View_intro_List_imgShowBack{
+    margin-top: 20px;
+    width: 100%;
+    background: url("../images/View_intro_List_imgShowBack.jpg");
+    padding: 20px 10px 0 10px;
+}
+.View_intro_List_imgShowBack .TopCon li{
+    position: relative;
+    float: left;
+    width: 33.3%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+.View_intro_List_imgShowBack ._h3{
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    width: 94%;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.56);
+    color: #fff;
+    font-size: 1.2em;
+}
+.View_intro_List_imgShowBack ._h3 p{
+    text-align: left;
+    margin: 0;
+    padding: 0 10px;
+}
+.Traffic_middle_back{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.Traffic_middle_back ._a{
+    display: inline-block;
+    width: 30%;
+    height: 60%;
+    margin: 0 5%;
+    margin-top: 9%;
+}
+.Traffic_ul_back{
+    width: 100%;
+    background: url("../images/tj_all_body_back.jpg");
+    padding: 20px 10px 0 10px;
+}
+.Traffic_ul_back li{
+    position: relative;
+    width: 100%;
+}
+.Traffic_ul_back li ._img{
+    position: absolute;
+    left: 2.5%;
+    top: 6%;
+    display: block;
+    height: 85%;
+    width: 95%;
+    overflow: hidden;
+}
+.Traffic_Train_traffic_mi{
+    position: relative;
+    width: 100%;
+    box-shadow: 2px 0 5px #000;
+}
+.Traffic_Train_traffic_mi ._span1{
+    position: absolute;
+    left: 38%;
+    top: 22%;
+    height: 8%;
+    width: 37%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #513c30;
+    overflow: hidden;
+}
+.Traffic_Train_traffic_mi ._span2{
+    position: absolute;
+    left: 38%;
+    top: 34%;
+    height: 8%;
+    width: 37%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #513c30;
+    overflow: hidden;
+}
+.Traffic_Train_traffic_mi ._span3{
+    position: absolute;
+    left: 38%;
+    top: 58%;
+    height: 8%;
+    width: 37%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #513c30;
+    overflow: hidden;
+}
+.Traffic_Train_traffic_mi ._a1{
+    position: absolute;
+    left: 86%;
+    top: 30%;
+    height: 10%;
+    width: 7%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #513c30;
+    overflow: hidden;
+}
+.Traffic_Train_traffic_mi ._a2{
+    position: absolute;
+    left: 86%;
+    top: 56%;
+    height: 10%;
+    width: 7%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #513c30;
+    overflow: hidden;
+}
+.Traffic_Train_traffic_mi ._a3{
+    position: absolute;
+    left: 28%;
+    top: 76%;
+    height: 10%;
+    width: 39%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #513c30;
+    overflow: hidden;
+}
+.Traffic_Train_traffic_mi ._a3:active .N_has{
+    display: none;
+}
+.Traffic_Train_traffic_mi ._a3:active .N_cur{
+    display: block;
+}
+.Traffic_Result{
+    position: relative;
+    width: 100%;
+}
+.Traffic_Result .backEach{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background: url("../images/Traffic_Result_backes1.jpg");
+    background-size: 100%;
+}
+.backEach p{
+    font-size: 1.5em;
+}
+.Traffic_Result .showImg{
+    margin-top: 15px;
+}
+.Traffic_Result ._span1{
+    position: absolute;
+    left: 33%;
+    top: 10%;
+    height: 30%;
+    width: 34%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #ccaf95;
+    overflow: hidden;
+}
+.Traffic_Result ._span2{
+    position: absolute;
+    left: 25%;
+    top: 68%;
+    height: 30%;
+    width: 50%;
+    text-align: center;
+    font-size: 1em;
+    color: #bb8343;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Traffic_Result ._a1{
+    position: absolute;
+    left: 15%;
+    top: 66%;
+    height: 30%;
+    width: 10%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #bb8343;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Traffic_Result ._a2{
+    position: absolute;
+    left: 76%;
+    top: 66%;
+    height: 30%;
+    width: 10%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #bb8343;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Traffic_Result ._ul{
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+.Traffic_Result ._ul li{
+    position: relative;
+    width: 100%;
+    padding-top: 10%;
+}
+.Traffic_Result ._ul ._div1{
+    position: absolute;
+    left: 34%;
+    top: 15%;
+    height: 30%;
+    width: 30%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #dc7a10;
+    overflow: hidden;
+}
+.Traffic_Result ._ul ._div2{
+    position: absolute;
+    left: 7%;
+    top: 20%;
+    height: 77%;
+    width: 24%;
+    text-align: center;
+    font-size: 1em;
+    color: #bb8343;
+    overflow: hidden;
+}
+.Traffic_Result ._ul ._div3{
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    height: 77%;
+    width: 24%;
+    text-align: center;
+    font-size: 1em;
+    color: #bb8343;
+    overflow: hidden;
+}
+.Traffic_Result ._ul p{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Traffic_Result .tj_all_btn_return{
+    padding-bottom: 10%;
+}
+.StopHotelControl{
+    position: relative;
+    width: 100%;
+}
+.StopHotelControl .StopHotelClickRi{
+    display: none;
+}
+.StopHotelControl .A_le{
+    margin-top: 2%;
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+.StopHotelControl .A_ri{
+    margin-top: 2%;
+    float: right;
+    width: 50%;
+    height: 50%;
+}
+.ViewSpotDetails_control{
+    position: relative;
+    width: 100%;
+}
+.ViewSpotDetails_control ._a1{
+    position: absolute;
+    left: 11%;
+    top: -13%;
+    height: 42%;
+    width: 17%;
+    text-align: center;
+    font-size: 1em;
+    color: #bb8343;
+    overflow: hidden;
+}
+.ViewSpotDetails_control ._a2{
+    position: absolute;
+    left: 34%;
+    top: -28%;
+    height: 77%;
+    width: 29%;
+    text-align: center;
+    font-size: 1em;
+    color: #bb8343;
+    overflow: hidden;
+}
+.ViewSpotDetails_control ._a3{
+    position: absolute;
+    left: 71%;
+    top: -13%;
+    height: 42%;
+    width: 17%;
+    text-align: center;
+    font-size: 1em;
+    color: #bb8343;
+    overflow: hidden;
+}
+.ViewSpotDetails_control ._spanA{
+    position: absolute;
+    left: 40%;
+    top: 52%;
+    height: 16%;
+    width: 20%;
+    text-align: center;
+    font-size: 1.3em;
+    color: #c7ad90;
+    overflow: hidden;
+}
+.ViewSpotDetails_control .Cont{
+    position: absolute;
+    left: 5%;
+    top: 74%;
+    height: 18%;
+    width: 90%;
+    text-align: center;
+    font-size: 1.3em;
+    color: #c7ad90;
+    overflow: hidden;
+}
+.ViewSpotDetails_control .Cont img{
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.ViewSpotDetails_BotC .Control{
+    width: 100%;
+}
+.ViewSpotDetails_BotC .Control li{
+    float: left;
+    width: 50%;
+    height: 36px;
+    text-align: center;
+    background: url("../images/ViewSpotDetails_BotCn.png");
+    line-height: 36px;
+    background-size: 100% 100%;
+    color: #5d4632;
+}
+.ViewSpotDetails_BotC .Control li.cur{
+    background: url("../images/ViewSpotDetails_BotCur.png");
+    background-size: 100% 100%;
+    color: #e9c9a8;
+}
+.ViewSpotDetails_BotC .ContBast{
+    display: none;
+}
+.ViewSpotDetails_BotC .ContBast .backEach{
+    padding: 20px;
+}
+.ViewSpotDetails_BotC .ContBast .backEach>*{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.ViewSpotDetails_BotC .cont_active{
+    display: block;
+}
+.ViewSpotDetails_BotC .ContBast .backEach h3{
+    font-size: 1.8em;
+}
+.ViewSpotDetails_BotC .ContBast .backEach h4{
+    font-size: 1.8em;
+    color: #886c59;
+}
+.ViewSpotDetails_BotC .ContBast .backEach h5{
+    font-size: 1.4em;
+    color: #cfa487;
+}
+.ViewSpotDetails_BotC .ContBast .backEach .imgLogo{
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.ViewSpotDetails_BotC .ContBast .backEach p{
+    text-align: left;
+    text-indent: 2em;
+    color: #957662;
+    padding-bottom: 10px;
+}
+.ViewSpotDetails_BotC .Tourist li{
+    margin-bottom: 10px;
+}
+.ViewSpotDetails_BotC .Tourist li:last-child{
+    margin-bottom:0;
+}
+.ViewSpotDetails_BotC .Tourist_logo{
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.ViewSpotDetails_BotC .Tourist_cont{
+    float: left;
+    width: 80%;
+    text-align: left;
+    overflow: hidden;
+}
+.ViewSpotDetails_BotC .Tourist .Tourist_cont p{
+    margin: 0;
+    padding: 0;
+    padding-left: 10%;
+    text-indent:0;
+}
+.ViewSpotDetails_BotC .Tourist .backEach{
+    padding-bottom: 0;
+}
+.ViewSpotDetails_BotC .Tourist .Tourist_cont p span{
+    display: inline-block;
+}
+.ViewSpotDetails_BotC .Tourist_detail h3{
+    text-align: left;
+    color: #000;
+}
+.tj_All_footerDetails_control{
+    display: none;
+    text-align: center;
+    padding-top: 3.5%;
+}
+.PersonalInsider_present{
+    position: relative;
+    width: 100%;
+    padding: 5px 20px;
+    text-align: center;
+    background-color: #e3ccb7;
+    border-radius: 5px;
+}
+.PersonalInsider_present h3{
+    font-size: 1.6em;
+    color: #564639;
+}
+.PersonalInsider_present h4{
+    text-align: left;
+    font-size: 1.5em;
+    color: #725d4c;
+}
+.PersonalInsider_present p{
+    text-align: left;
+    font-size: 1.2em;
+    color: #6f5a4a;
+    text-indent: 2em;
+}
+.PersonalInsider_present .bCon{
+    width: 100%;
+}
+.PersonalInsider_present .bCon .le{
+    text-align: left;
+    float: left;
+    width: 60%;
+    text-indent: 0;
+    overflow: hidden;
+}
+.PersonalInsider_present .bCon .ri{
+    text-align: left;
+    float: left;
+    width: 40%;
+    text-indent: 0;
+    overflow: hidden;
+    color: #ef8116;
+}
+.PersonalInsider_present li:last-child{
+    border-right: none;
+    padding-left: 6%;
+}
+.PersonalInsider_present li{
+    float: left;
+    width: 49%;
+    border-right: 1px solid #6f5a4a;
+}
+.TravelNotes{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.TravelNotes .top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    color: #66442e;
+    font-size: 1.3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.TravelNotes .bot{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+.TravelNotes .BoL{
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+.TravelNotes .BoL p{
+    margin: 0;
+    padding: 0;
+    color: #66442e;
+}
+.TravelNotes .BoL ._vp{
+    width: 100%;
+    font-size: 1em;
+    height: 15px;
+    overflow: hidden;
+}
+.TravelNotes .BoL ._vp span{
+    display: inline-block;
+}
+.TravelNotes .BoL ._np{
+    height: 48px;
+    overflow: hidden;
+}
+.TravelNotes .BoL ._vp img{
+    margin-top: -5px;
+ }
+.TravelNotes .Bor{
+    float: left;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+}
+.TravelNotes .Bor .imgLo{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #66442e;
+    background-color: royalblue;
+    overflow: hidden;
+}
+.TravelNotes .Bor .Bo_p{
+    height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Feedback_submit .form-control{
+    height: 50px;
+    background-color: #fff8f2;
+}
+.Feedback_submit textarea.form-control{
+    height: auto;
+}
+.Feedback_submit .form-group label{
+    display: block;
+    text-align: left;
+    font-size: 1.6em;
+    color: #72543e;
+}
+.Feedback_submit .tj_Feedback_select{
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    height: 100%;
+    width: 15%;
+    text-align: right;
+}
+.Feedback_submit .tj_Feedback_select img{
+    margin-top: .2%;
+    margin-right: 3%;
+}
+.tj_All_BastPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    z-index: 99999999;
+    background-color: rgba(0, 0, 0, 0.38);
+}
+.tj_All_BastPopup .table_cont{
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.tj_All_BastPopup .tj_auto_auto{
+    display: table-cell;
+    vertical-align: middle;
+}
+.tj_All_BastPopup .popupControl{
+    width: 80%;
+    margin: 0 auto;
+    background: url("../images/tj_All_BastPopup_line.jpg");
+    background-size: 100% 100%;
+}
+.Feedback_popupT{
+    font-size: 1.8em;
+    color: #72543e;
+}
+.ShoppingCart .CartUl{
+    width: 100%;
+}
+.ShoppingCart .CartUl li{
+    width: 100%;
+    display: table;
+    padding: 10px 0;
+    border-bottom: 1px solid #8b705a;
+}
+.ShoppingCart .CartUl li .check{
+    margin: 0 10px;
+}
+.ShoppingCart .table_cell{
+    display: table-cell;
+}
+.ShoppingCart .ve_top{
+    vertical-align: top;
+}
+.ShoppingCart .ve_top{
+    vertical-align: middle;
+}
+.ShoppingCart .te_ce{
+    text-align: center;
+}
+.ShoppingCart .wi_100{
+    width: 100%;
+    position: relative;
+}
+.ShoppingCart .N_h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    color: #946c59;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ShoppingCart .N_Con{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    color: #946c59;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    margin-left: 5px;
+}
+.tj_all_sP_addControl{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    height: 30px;
+    border-top: 1px solid #8b705a;
+    border-left: 1px solid #8b705a;
+    font-size: 1.2em;
+    line-height: 30px;
+}
+.tj_all_sP_addControl .le{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid #8b705a;
+    border-right: 1px solid #8b705a;
+    text-align: center;
+}
+.tj_all_sP_addControl .mi{
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid #8b705a;
+    border-right: 1px solid #8b705a;
+    text-align: center;
+}
+.tj_all_sP_addControl .ri{
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid #8b705a;
+    border-right: 1px solid #8b705a;
+    text-align: center;
+}
+.tj_all_sP_addLength{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 10px;
+}
+.ShoppingCart .col1{
+   color: #dc7a10;
+}
+.tj_all_sP_addLength p{
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+.ShoppingCart_log{
+    position: absolute;
+    top: 8%;
+    left: 7%;
+    width: 85%;
+    height: 84%;
+    overflow: hidden;
+}
+.ShoppingCart_all_price{
+    margin-top: 10px;
+    text-align: right;
+    margin-right: 5px;
+    color: #8e6350;
+}
+.ShoppingCart_all_price .span1{
+    color: #dc7a10;
+}
+.ShoppingCart_head .check{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+.ShoppingCart_head h3{
+    position: absolute;
+    top: 31%;
+    left: 13%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    color: #e2ccb8;
+}
+.ShoppingCarts_all_control .click{
+    position: absolute;
+    top: 32%;
+    left: 4%;
+    color:#e2ccb8;
+}
+.ShoppingCarts_all_control .click:link{
+    text-decoration: none;
+}
+.ShoppingCarts_all_control .moneyShow{
+    position: absolute;
+    top: 34%;
+    right: 50%;
+    width: 45%;
+    text-align: right;
+    color: #e0c8b1;
+    font-size: 1.5em;
+}
+.ShoppingCarts_all_control .col1{
+   color: #dc7a10;
+}
+.ShoppingCarts_all_control .btn_payment{
+    position: absolute;
+    top: 29%;
+    right: 20px;
+    width: 38%;
+}
+.TibetanCulture_topConBack{
+    position: relative;
+    width: 100%;
+}
+.TibetanCulture_topConBack ._GoTo{
+    position: absolute;
+    top: 20%;
+    right: 4%;
+    width: 9px;
+    display: block;
+    height: 18px;
+    background: url("../images/TibetanCulture_topGoto.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.TibetanCulture_topConBack ._OutTo{
+    position: absolute;
+    bottom: 24%;
+    right: 47%;
+    width: 18px;
+    display: block;
+    height: 9px;
+    background: url("../images/TibetanCulture_topOutTo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.TibetanCulture_topConBack.current ._a1,.TibetanCulture_topConBack.current ._a2,.TibetanCulture_topConBack.current ._a3{
+    top: 14%;
+}
+.TibetanCulture_topConBack .bnt2,.TibetanCulture_topConBack ._a4,.TibetanCulture_topConBack ._a5,.TibetanCulture_topConBack ._a6,.TibetanCulture_topConBack ._OutTo{display: none;}
+.TibetanCulture_topConBack.current ._GoTo,.TibetanCulture_topConBack.current .bnt1{display: none;}
+.TibetanCulture_topConBack.current .bnt2,.TibetanCulture_topConBack.current ._OutTo
+,.TibetanCulture_topConBack.current ._a4,.TibetanCulture_topConBack.current ._a5,.TibetanCulture_topConBack.current ._a6{display: block;}
+.TibetanCulture_topConBack ._a1{
+    position: absolute;
+    top: 25%;
+    left: 14%;
+    width: 18%;
+    display: block;
+    height: 100%;
+    background: url("../images/TibetanCulture_topN1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a2{
+    position: absolute;
+    top: 25%;
+    left: 43%;
+    width: 18%;
+    display: block;
+    height: 100%;
+    background: url("../images/TibetanCulture_topN2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a3{
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    width: 18%;
+    display: block;
+    height: 100%;
+    background: url("../images/TibetanCulture_topN3.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a4{
+    position: absolute;
+    top: 45%;
+    left: 16%;
+    width: 14%;
+    height: 100%;
+    background: url("../images/TibetanCulture_topN4.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a5{
+    position: absolute;
+    top: 45%;
+    left: 43%;
+    width: 18%;
+    height: 100%;
+    background: url("../images/TibetanCulture_topN5.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a6{
+    position: absolute;
+    top: 48%;
+    left: 71%;
+    width: 14%;
+    height: 100%;
+    background: url("../images/TibetanCulture_topN6.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a1:active{
+    background: url("../images/TibetanCulture_topC1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a2:active{
+    background: url("../images/TibetanCulture_topC2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a3:active{
+    background: url("../images/TibetanCulture_topC3.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a4:active{
+    background: url("../images/TibetanCulture_topC4.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a5:active{
+    background: url("../images/TibetanCulture_topC5.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCulture_topConBack ._a6:active{
+    background: url("../images/TibetanCulture_topC6.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.TibetanCultureEntertainment_back.current ._a1{
+    top: 30%;
+    left: 7%;
+}
+.TibetanCultureEntertainment_back.current ._a2{
+    top: 30%;
+    left: 41%;
+}
+.TibetanCultureEntertainment_back.current ._a3{
+    top: 30%;
+    left: 75%;
+}
+.TibetanCultureEntertainment_back.current ._a4{
+    top: 61%;
+    left: 9%;
+}
+.TibetanCultureEntertainment_back.current ._a5{
+    top: 61%;
+    left: 41%;
+}
+.TibetanCultureEntertainment_back.current ._a6{
+    top: 61%;
+    left: 77%;
+}
+.index_weatherAll,.index_h3_headAll,.index_A_linkAll{
+    position: relative;
+    width: 100%;
+}
+.index_h3_headAll{
+    text-align: center;
+    box-shadow: 0 2px 5px #000;
+}
+.index_h3_headAll .tj_all_poz img{
+    vertical-align: middle;
+    margin-top: 2.5%;
+}
+.News_activities_ul{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.News_activities_ul ._span1{
+    position: absolute;
+    top: 26%;
+    left: 25%;
+    width: 50%;
+    height: 56%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #d1bca3;
+    font-size: 1.6em;
+}
+.index_A_linkAll ._a1{
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    width: 20%;
+    height: 33%;
+}
+.index_A_linkAll ._a2{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 20%;
+    height: 33%;
+}
+.index_A_linkAll ._a3{
+    position: absolute;
+    top: 10%;
+    left: 72%;
+    width: 20%;
+    height: 33%;
+}
+.index_A_linkAll ._a4{
+    position: absolute;
+    top: 54%;
+    left: 6%;
+    width: 20%;
+    height: 33%;
+}
+.index_A_linkAll ._a5{
+    position: absolute;
+    top: 54%;
+    left: 40%;
+    width: 20%;
+    height: 33%;
+}
+.index_A_linkAll ._a6{
+    position: absolute;
+    top: 54%;
+    left: 72%;
+    width: 20%;
+    height: 33%;
+}
+.index_weatherAll ._weather1{
+    position: absolute;
+    bottom: 10px;
+    left: 3%;
+    width: 10%;
+}
+.index_weatherAll ._weather2{
+    position: absolute;
+    bottom: 10px;
+    left: 14%;
+    width: 10%;
+    color: #e8e8e8;
+    font-size: 1.4em;
+}
+.index_weatherAll ._weather3{
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+    width: 13%;
+    font-size: 1.4em;
+    color: #e8e8e8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.index_weatherAll ._weather4{
+    position: absolute;
+    bottom: 7px;
+    left: 35%;
+    width: 8%;
+}
+.index_weatherAll ._weather5{
+    position: absolute;
+    bottom: 22px;
+    right: 1%;
+    height: 25px;
+    color: #e8e8e8;
+    font-size: 1.5em;
+}
+.index_weatherAll ._weather6{
+    position: absolute;
+    bottom: -7px;
+    right: 0%;
+    height: 25px;
+    color: #e8e8e8;
+    font-size: 1.4em;
+}
+.tj_all_Map_bot{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    z-index: 999999;
+}
+.tj_all_Map{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+}
+.tj_all_Map .Map_a1{
+    position: absolute;
+    top: 22%;
+    left: 65%;
+    width: 9%;
+    height: 13%;
+}
+.tj_all_Map .Map_a2{
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    width: 9%;
+    height: 13%;
+}
+.tj_all_Map .Map_a3{
+    position: absolute;
+    top: 36%;
+    left: 10%;
+    width: 10%;
+    height: 16%;
+}
+.tj_all_Map .Map_a4{
+    position: absolute;
+    top: 42%;
+    left: 41%;
+    width: 10%;
+    height: 16%;
+}
+.tj_all_Map .Map_a5{
+    position: absolute;
+    top: 60%;
+    left: 57%;
+    width: 11%;
+    height: 18%;
+}
+.tj_all_Map .Map_a6{
+    position: absolute;
+    top: 74%;
+    left: 81%;
+    width: 11%;
+    height: 15%;
+}
+.tj_all_Map_heightAuto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

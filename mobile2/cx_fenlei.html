@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>分类</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metass
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        /*----------------------全局变量 start--------------------------*/
+        body{overflow-x:hidden;font-family:"微软雅黑";font-size: 1em;}
+        ul{list-style-type:none;margin:0;padding:0;}
+        a{text-decoration:none;}
+        /*----------------------全局变量 end--------------------------*/
+        body{
+            background: url("public/images/cx_002_03.png")no-repeat;
+            background-size: cover;
+            width: 100%;
+        }
+        .cx_left{
+            background: url("public/images/cx_left.png");
+            background-size: 100%;
+            height: 100em;
+            width: 9.5em;
+            position: fixed;
+        }
+        .cx_left img{
+            max-width: 100%;
+            height: auto;
+        }
+        .cx_left li{
+            background-size: cover!important;
+            height: 3.5em;
+            line-height: 3.5em;
+            text-align: center;
+            width: 8.3em;
+        }
+        .cx_left ul{
+            position: relative;
+            top: 2em;
+        }
+        .cx_right img{
+            max-width: 100%;
+            height: auto;
+        }
+        .cx_right{
+            padding-top: 2em;
+        }
+        .right_one{
+            text-align: center;
+            padding-top: 1em;
+        }
+        .right_one h3{
+            margin: 0;
+            padding: 0;
+            color: #66442e;
+            position: relative;
+            top: 0.3em;
+            font-weight: bold;
+        }
+        .right_one li{
+            display: inline-block;
+            margin-left: 1em;
+            margin-top: 1em;
+        }
+        .right_one ul{
+            margin-left: -1em;
+        }
+        .right_one a{
+            color: #66442e;
+            font-size: 1.2em;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<!--处理加载状态 start-->
+<div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+    <div style="display: table;width: 100%;height: 100%;">
+        <div style="display: table-cell;vertical-align: middle;">
+            <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var he = document.documentElement.clientHeight;//高
+    var _id = document.getElementById('PageLoadingState');
+    _id.style.height=he+'px';
+    document.onreadystatechange=function(){
+        if(document.readyState=='complete'){
+            document.getElementById('PageLoadingState').style.display='none';
+        }
+    }
+</script>
+<!--处理加载状态 end-->
+<!--顶部展示栏 start-->
+<div class="templates_Head" data-current="1" data-template="tj_all_index_headSearch"></div>
+<!--顶部展示栏 end-->
+<div class="cx_bg mt-13">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-xs-4" style="padding: 0">
+              <div class="cx_left">
+                  <ul>
+                      <li class="sd">
+                          <img src="public/images/cx_4.png" alt=""/>
+                      </li>
+                      <li class="sd">
+                          <img src="public/images/cx_3.png" alt=""/>
+                      </li>
+                      <li class="sd">
+                          <img src="public/images/cx_2.png" alt=""/>
+                      </li>
+                      <li class="sd">
+                          <img src="public/images/cx_1.png" alt=""/>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-xs-8" style="padding: 0.5em;margin-bottom: 50%">
+              <div class="cx_right">
+                  <img src="public/images/cx-03.png" alt=""/>
+                  <div class="right_one">
+                      <div>
+                          <h3>藏羌饰品</h3>
+                          <img src="public/images/cx-04.png" alt=""/>
+                          <ul>
+                              <li><a href="#">镯子</a></li>
+                              <li><a href="#">牛角梳</a></li>
+                              <li><a href="#">玛瑙念珠</a></li>
+                              <li><a href="#">镯子</a></li>
+                              <li><a href="#">藏吧啦</a></li>
+                              <li><a href="#">服装</a></li>
+                              <li><a href="#">菩提珠</a></li>
+                              <li><a href="#">银饰品</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h3>理县食品</h3>
+                          <img src="public/images/cx-04.png" alt=""/>
+                          <ul>
+                              <li><a href="#">镯子</a></li>
+                              <li><a href="#">牛角梳</a></li>
+                              <li><a href="#">玛瑙念珠</a></li>
+                              <li><a href="#">镯子</a></li>
+                              <li><a href="#">藏吧啦</a></li>
+                              <li><a href="#">服装</a></li>
+                              <li><a href="#">菩提珠</a></li>
+                              <li><a href="#">银饰品</a></li>
+                          </ul>
+                      </div>
+                      <div>
+                          <h3>服装</h3>
+                          <img src="public/images/cx-04.png" alt=""/>
+                          <ul>
+                              <li><a href="#">镯子</a></li>
+                              <li><a href="#">牛角梳</a></li>
+                              <li><a href="#">玛瑙念珠</a></li>
+                              <li><a href="#">镯子</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+<!--底部导航栏 start-->
+<div class="templates_Footer" data-current="4" data-template="tj_All_footer"></div>
+<!--底部导航栏 end-->
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+<script type="text/javascript">
+    //    自定义模块 示例引用
+    seajs.use("./public/templates/js/cx_fenlei",function(s){
+        s.fontcolor();
+    });
+</script>
+</body>
+</html>

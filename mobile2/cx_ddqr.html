@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>订单确认</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        body,ul,li,p,h3,h4,img,div{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+            list-style-type:none;
+        }
+        body{
+            background: url("public/images/cx_bg.png")no-repeat;
+            background-size: cover;
+            overflow-x: hidden;
+            padding-bottom: 3em;
+        }
+        .cx_ddxx{
+            background-color: #eedac6;
+            width: 92%;
+            margin: 0 auto;
+            margin-top: 1em;
+            padding-top: 1em;
+            box-shadow: 0px 1px 10px #585858;
+            padding-left: 0em;
+            padding-right: 0em;
+        }
+        .dt{
+            font-size: 2em;
+            color: #946549;
+            position: relative;
+            top: 1.2em!important;
+        }
+        .p_news p{
+            color: #946549;
+            font-size: 1.3em;
+        }
+        .xx{
+            color: #e76f16;
+            font-size: 2em;
+            position: relative;
+            top: 1.2em!important;
+            left: 0.5em;
+        }
+        .p_news{
+            padding-right: 0!important;
+            padding-left: 1.5em!important;
+        }
+        .cx_dzf{
+            width: 92%;
+            margin: 0 auto;
+            color: #f5f5f5;
+            padding: 0.3em;
+
+        }
+        .cx_dzf p{
+            font-size: 1.5em;
+            padding-top: 0.2em;
+        }
+        .cx_headc{
+            width: 92%;
+            margin: 0 auto;
+            background:url("public/images/bgbg.png")no-repeat;
+            background-size: cover;
+            padding-left: 0em;
+            padding-right: 0em;
+            margin-bottom: 20%;
+        }
+        .cx_headcc{
+            padding-top: 0.5em;
+            padding-bottom: 3.2em;
+            border-bottom: 1px solid #a37051;
+        }
+        .cx_headcc h4{
+            float: left;
+            padding-left: 0.5em;
+            margin-top: 0.3em;
+            color: #946549;
+        }
+        .xuanzhe{
+            background: url("public/images/xuankang.png")no-repeat;
+            background-size: cover;
+            width: 2.5em;
+            height: 2.5em;
+            margin-left: 0.5em;
+            float: left;
+        }
+        .cx_next{
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            width: 95%;
+            margin: 0 auto;
+        }
+        .next_left{
+            /*background:url("public/images/xzk.png")no-repeat;*/
+            /*background-size: cover;*/
+            margin-top: 1em;
+            text-align: center;
+        }
+        .next_left img{
+            height: 8em;
+            width: 8em;
+        }
+        .fd h4{
+            padding-left: 0.3em;
+            color: #946549;
+            position: relative;
+            top: 0em;
+            font-size: 1.5em;
+        }
+        .fd p{
+            padding-left: 0.5em;
+            margin: 0;
+            position: relative;
+            top: 1em;
+            font-size: 1.2em;
+            color: #946549;
+            padding-top: 0.3em;
+        }
+        .next_right p{
+            margin-top: 2.2em;
+            position: relative;
+            top: -1.4em;
+            font-size: 1.3em;
+        }
+        .yhj{
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            border-bottom: 1px solid #a37051;
+            padding-bottom: 3em;
+            padding-top: 1.2em;
+        }
+        .yhj1{
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            border-bottom: 1px solid #a37051;
+            padding-bottom: 3em;
+            padding-top: 1em;
+        }
+        .yhj1 span{
+            position: relative;
+            top: -1.2em;
+            color: #946549;
+        }
+        .yhj p{
+            font-size: 1.5em;
+            color: #946549;
+            float: left;
+        }
+        .yhj1 p{
+            font-size: 1.5em;
+            color: #946549;
+            float: left;
+        }
+        .yhj li{
+            background:url("public/images/xuankang.png")no-repeat;
+            background-size: cover;
+            height: 2.5em;
+            width: 2.5em;
+            display: inline-block;
+            margin-left: 4em;
+            position: relative;
+            top: -0.5em;
+        }
+        .yhj1 li{
+            background:url("public/images/xuankang.png")no-repeat;
+            background-size: cover;
+            height: 2.5em;
+            width: 2.5em;
+            display: inline-block;
+            margin-left: 1.5em;
+            position: relative;
+            top: -0.5em;
+
+        }
+        .yhj ul{
+            margin-left: -2.5em;
+            float: left;
+        }
+        .yhj1 ul{
+
+            float: left;
+        }
+        .yhj span{
+            color: #946549;
+            position: relative;
+            top: 0.6em;
+            left: 2.5em;
+        }
+        .weibu_one li{
+            background-color: #f9e7d7;
+            border: 1px solid #66442e;
+            width: 2.5em;
+            height: 2.5em;
+            display: inline-block;
+            line-height:2.2em;
+            color: #8b705a;
+            text-align: center;
+            margin-left: -0.3em;
+        }
+        .weibu_one ul{
+            float: right;
+            padding-right: 1em;
+            position: relative;
+            top: -0.2em;
+        }
+        .gmsl p{
+            float: left;
+            font-size: 1.5em;
+            color: #946549;
+        }
+        .gmsl{
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            border-bottom: 1px solid #a37051;
+            padding-bottom: 3em;
+            padding-top: 1em;
+        }
+        .wenbenk{
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            width: 95%;
+            margin: 0 auto;
+            padding-bottom: 2em;
+            padding-top: 1em;
+        }
+        .heji{
+            text-align: right;
+            font-size: 1.5em;
+        }
+        .heji p{
+            color: #946549;
+        }
+        .heji span{
+            color: #e76f16;
+        }
+        .wenbenk textarea{
+            width: 100%;
+            outline: none;
+            border-radius: 6px;
+            background-color: #e2c9b4;
+            border: 1px solid #857c73;
+        }
+        .cx_qrweibu{
+            width: 100%;
+            height: 6em;
+            background:url("public/images/nav.png")no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 88.2%;
+        }
+        .cx_qrweibu ul li{
+            display: inline-block;
+            margin-left: 1em;
+        }
+        .cx_qrweibu ul{
+            margin-left: 0.5em;
+            float: left;
+        }
+        .p_xz{
+            background:url("public/images/xuankang.png")no-repeat;
+            background-size: cover;
+            height: 3em;
+            width: 3em;
+            position: relative;
+            top: 1.2em;
+        }
+        .cx_ht{
+            background:url("public/images/8.11.png")no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 2em;
+            position: absolute;
+            top: 5.2em;
+        }
+        .p_qx{
+            color: #c8ae95;
+            font-size:1.8em;
+            font-weight: bold;
+            position: relative;
+            top: -0.3em;
+        }
+        .weibu_right{
+            float: right;
+            position: relative;
+            top: -4em;
+            left: 9em;
+        }
+        .weibu_right p{
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #c8ae95;
+            display: inline;
+
+        }
+        .weibu_right img{
+            width: 30%;
+            height: auto;
+            display: inline;
+            position: relative;
+            top: -0.3em;
+            left: 1.5em;
+        }
+    </style>
+</head>
+<body>
+<!--处理加载状态 start-->
+<div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+    <div style="display: table;width: 100%;height: 100%;">
+        <div style="display: table-cell;vertical-align: middle;">
+            <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var he = document.documentElement.clientHeight;//高
+    var _id = document.getElementById('PageLoadingState');
+    _id.style.height=he+'px';
+    document.onreadystatechange=function(){
+        if(document.readyState=='complete'){
+            document.getElementById('PageLoadingState').style.display='none';
+        }
+    }
+</script>
+<!--处理加载状态 end-->
+<!--顶部展示栏 start-->
+<div class="templates_Head" data-current="21" data-template="tj_all_index_head"></div>
+<!--顶部展示栏 end-->
+<div class="cx_ddxx" style="margin-top: 21%;">
+    <div class="container">
+         <div class="row">
+             <div class="col-xs-1">
+                 <span class="glyphicon glyphicon-map-marker dt" aria-hidden="true"></span>
+             </div>
+             <div class="col-xs-9 p_news">
+                 <p>收货人：<span>陈鑫</span></p>
+                 <p>电话：<span>123456789123</span></p>
+                 <p>收货地址：<span>四川省成都市华阳镇</span></p>
+             </div>
+             <div class="col-xs-1" style="padding: 0">
+                 <span class="glyphicon glyphicon-menu-right xx" aria-hidden="true"></span>
+             </div>
+         </div>
+    </div>
+</div>
+<div class="cx_dzf">
+    <p style="float: left">订单号：<span>123456789</span></p>
+    <p style="float: right">待支付</p>
+</div>
+<div style="clear: both"></div>
+<div class="cx_headc container">
+    <div class="row">
+        <div class="col-xs-12" style="padding: 0">
+            <div class="cx_headcc">
+                <div class="xuanzhe"></div>
+                <h4>藏家楼</h4>
+            </div>
+        </div>
+    </div>
+    <div style="border-bottom: 1px solid #a37051;" class="row">
+        <div class="cx_next">
+            <div class="col-xs-4" style="padding: 0">
+                <div class="next_left">
+                    <img src="public/images/psb.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="col-xs-6" style="padding: 0">
+                <div class="fd">
+                    <h4>天然无色么么哒</h4>
+                    <p>颜色分类：<span>红色</span></p>
+                    <p>长度：<span>15cm</span></p>
+                </div>
+            </div>
+            <div class="col-xs-2" style="padding: 0">
+                <div class="next_right">
+                    <p style="color:#e76f16;">￥318.00</p>
+                    <p style="position: relative;left:1.5em;color: #946549;">X1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div style="clear: both"></div>
+
+    <div class="yhj">
+        <p>优惠卷</p>
+        <ul>
+            <li>
+                <span>￥10.00</span>
+            </li>
+            <li>
+                <span>￥10.00</span>
+            </li>
+            <li>
+                <span>￥10.00</span>
+            </li>
+        </ul>
+    </div>
+    <div class="gmsl">
+        <p>购买数量</p>
+        <div class="weibu_one" style="background-color: #f9e7d7">
+            <ul>
+                <li class="cx_jian">-</li>
+                <li class="cx_sz">1</li>
+                <li class="cx_jia">+</li>
+            </ul>
+        </div>
+    </div>
+    <div class="yhj1">
+        <p>配送方式</p>
+        <ul>
+            <li></li>
+            <span>上门自提</span>
+            <li></li>
+            <span>快递￥12.00</span>
+        </ul>
+    </div>
+    <div class="wenbenk">
+       <div class="heji">
+           <p>合计：<span>￥318.00</span></p>
+       </div>
+        <textarea class="form-control" placeholder="给卖家留言..."></textarea>
+
+    </div>
+</div>
+
+<div class="cx_qrweibu">
+    <ul>
+        <li><p class="p_xz"></p></li>
+        <li><p class="p_qx">全选</p></li>
+
+    </ul>
+    <div class="weibu_right">
+        <p>取消订单</p>
+        <a href="cx_zffs.html"><img src="public/images/cx_tjdd.png" alt=""/></a>
+    </div>
+    <p class="cx_ht"></p>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+<script>
+    seajs.use("./public/templates/js/cx_ddqr",function(s){
+        s.fontcolor2()
+    });
+</script>
+
+</body>
+</html>
+
+
+

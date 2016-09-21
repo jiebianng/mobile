@@ -1,0 +1,21 @@
+Personal 个人中心
+Store_list商店列表
+Store_listSearch搜索界面（商品界面（购））
+LiCommunity理县社区
+View_Video景点视频
+View_intro_List理县景点
+Traffic交通页
+Traffic_Train_traffic车次查询
+Traffic_Result交通查询结果
+StopHotel酒店类(住)
+ViewSpotDetails景点详情
+ViewPresentList景点介绍列表
+PersonalInsider会员中心
+TravelNotes游记攻略
+Feedback意见反馈
+ShoppingCart购物车
+DeliciousFood美食列表（吃）
+TibetanCulture藏羌文化
+TibetanCultureEntertainment藏羌文化(娱)
+index首页
+AllMap地图

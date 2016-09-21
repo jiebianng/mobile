@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!--阻止浏览器缓存-->
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <!-- Basic Page Needs
+     ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- js
+    ================================================== -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/validform.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div class="tjAllHead">
+        <div class="clearfix">
+            <a href="javascript:history.go(-1)" class="fl fo-se-13 mt-1 fo-co-3 z-index-100">&nbsp;&nbsp;<img src="images/icon-return.png" style="width: 1.2rem;vertical-align: bottom;" alt=""></a>
+            <div class="title">登录</div>
+            <a href="#" class="Bri"></a>
+        </div>
+    </div>
+    <div class="mt-7">
+        <div class="pad1">
+            <div class="signInCla">
+                <ul class="top">
+                    <li><a href="javascript:void (0)">账号登录</a></li>
+                    <li><a href="javascript:void (0)">快捷登录</a></li>
+                </ul>
+                <form class="registerform">
+                    <ul class="inp">
+                        <li class="flex">
+                            <img src="images/icon-sign1.png" alt="" style="width: 1.6rem;"/>
+                            <div class="flex-1">
+                                <input type="text" class="form-control2" placeholder="请输入ID/昵称／手机号" datatype="nl" nullmsg="请输入ID/昵称／手机号" errormsg="ID/昵称／手机号为1-30个字符"/>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <img src="images/icon-sign2.png" alt="" style="width: 1.6rem;"/>
+                            <div class="flex-1">
+                                <input type="text" class="form-control2" placeholder="请输入密码" datatype="nl" nullmsg="请输入密码" errormsg="密码格式不正确"/>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+                <form class="registerform">
+                    <ul class="inp">
+                        <li class="flex">
+                            <img src="images/icon-sign3.png" alt="" style="width: 1.6rem;"/>
+                            <div class="flex-1">
+                                <input type="text" class="form-control2" placeholder="请输入电话号码" datatype="phone" nullmsg="输入手机号码" errormsg="手机号码输入不正确"/>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <img src="images/icon-sign4.png" alt="" style="width: 1.6rem;"/>
+                            <div class="flex-1 po-re">
+                                <input type="text" class="form-control2" placeholder="请输入短信验证码" datatype="nl" nullmsg="请输入短信验证码" errormsg="验证码输入不正确"/>
+                                <div class="VerifyCodeSend sendCodeCol">点击获取</div>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="pad1 mt-1">
+            <input type="button" class="btnAll1" id="submitBtn" value="登录">
+            <p class="mt-1">
+                <a href="快速注册.html" class="fo-se-15 fo-co-8">手机快速注册</a>
+                <a href="忘记密码.html" class="fr fo-se-15 fo-co-8">忘记密码</a>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //操作选择卡
+        var cn =0;
+        var signInCla = $('.signInCla');
+        signInCla.find('.top li').click(function(){
+            var _this = $(this);
+            var i = _this.index();
+            cn=i;
+            _this.addClass('active').siblings().removeClass('active');
+            signInCla.find('.inp').hide().eq(cn).show();
+        });
+        signInCla.find('.top li').eq(cn).trigger('click');
+        $('#submitBtn').click(function(){
+            $(".registerform").eq(cn).submit();
+        });
+    </script>
+</body>
+</html>

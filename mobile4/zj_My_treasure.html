@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<div class="zjGm_hide">
+    <div class="zjGm_yk_back">
+        <div class="zjGm_he_auto">
+            <div class="zjGm_yk_back_line">
+                <ul class="zj_My_treasure">
+                    <li>
+                        <div class="top">
+                            <img src="images/zj_My_treasure_xin1.png" alt="" height="50"/>
+                            <div class="con">
+                                <p class="p2">购中江清汤挂面</p>
+                            </div>
+                            <a href="#" class="buy" onfocus="this.blur()"></a>
+                        </div>
+                        <div class="notice">
+                            <div class="curImage"></div>
+                            <div class="cur_con">
+                                <h2>使用说明</h2>
+                                <p>此优惠券仅限于中江购商城使用，在购买过程中，订单页面勾选使用优惠券，系统将自动使用优惠券为您结算。</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="top">
+                            <img src="images/zj_My_treasure_xin2.png" alt="" height="50"/>
+                            <div class="con">
+                                <p class="p1">￥20.00</p>
+                                <p class="p2">购中江清汤挂面</p>
+                            </div>
+                            <a href="#" class="buy" onfocus="this.blur()"></a>
+                        </div>
+                        <div class="notice">
+                            <div class="curImage"></div>
+                            <div class="cur_con">
+                                <h2>使用说明</h2>
+                                <p>此优惠券仅限于中江购商城使用，在购买过程中，订单页面勾选使用优惠券，系统将自动使用优惠券为您结算。</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="zjGm_header">
+                <img src="images/zj_game_header.png" alt=""/>
+            </div>
+            <div class="zjGm_footer">
+                <a href="index.html" onfocus="this.blur()"><img src="images/zj_game_return.png" alt="" class="max-wi-100"/></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".curImage").click(function(){
+        var has = $(this).hasClass("curImage_cur");
+        if(has){
+            $(this).removeClass("curImage_cur").siblings(".cur_con").slideUp(100);
+        }else{
+            $(this).addClass("curImage_cur").siblings(".cur_con").slideDown(100);
+        }
+    });
+</script>
+</body>
+</html>

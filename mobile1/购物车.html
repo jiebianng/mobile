@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <!--阻止浏览器缓存-->
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <!-- Basic Page Needs
+     ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- js
+    ================================================== -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="body-back-10">
+    <!--顶部导航 start-->
+    <div class="tjAllHead">
+        <div class="clearfix">
+            <a href="javascript:history.go(-1)" class="fl fo-se-13 mt-1 fo-co-3 z-index-100">&nbsp;&nbsp;</a>
+            <div class="title">购物车</div>
+            <a href="javascript:void (0)" class="Bri fo-co-3">编辑</a>
+        </div>
+    </div>
+    <!--顶部导航 end-->
+
+    <!--购物车列表 start-->
+    <div class="mt-5">
+        <div class="ShoppingCart">
+            <div class="ShopHead flex">
+                <div class="wi-4 te-ce">
+                    <div class="carOneCho"></div>
+                </div>
+                <div class="flex-5">
+                    <a href="单个店铺.html">
+                        <img src="images/icon-CarShopLog.png" alt="" style="width: 2rem;" class="ve-mi mr-1"/>
+                        <span class="ve-mi fo-se-15 mr-1">环球大爱网络科技旗舰店</span>
+                        <img src="images/icon-rigin.png" alt="" style="width: .8rem;" class="ve-mi"/>
+                    </a>
+                </div>
+            </div>
+            <ul class="ShopUl">
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ShoppingCart">
+            <div class="ShopHead flex">
+                <div class="wi-4 te-ce">
+                    <div class="carOneCho"></div>
+                </div>
+                <div class="flex-5">
+                    <a href="单个店铺.html">
+                        <img src="images/icon-CarShopLog.png" alt="" style="width: 2rem;" class="ve-mi mr-1"/>
+                        <span class="ve-mi fo-se-15 mr-1">环球大爱网络科技旗舰店</span>
+                        <img src="images/icon-rigin.png" alt="" style="width: .8rem;" class="ve-mi"/>
+                    </a>
+                </div>
+            </div>
+            <ul class="ShopUl">
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ShoppingCart">
+            <div class="ShopHead flex">
+                <div class="wi-4 te-ce">
+                    <div class="carOneCho"></div>
+                </div>
+                <div class="flex-5">
+                    <a href="单个店铺.html">
+                        <img src="images/icon-CarShopLog.png" alt="" style="width: 2rem;" class="ve-mi mr-1"/>
+                        <span class="ve-mi fo-se-15 mr-1">环球大爱网络科技旗舰店</span>
+                        <img src="images/icon-rigin.png" alt="" style="width: .8rem;" class="ve-mi"/>
+                    </a>
+                </div>
+            </div>
+            <ul class="ShopUl">
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex">
+                        <div class="te-ce wi-4">
+                            <div class="carOneCho"></div>
+                        </div>
+                        <div class="flex-5">
+                            <div class="flex">
+                                <div class="te-ce">
+                                    <a href="商品详情.html"><img src="images/del-fenLi.jpg" alt="" style="width: 7rem;"/></a>
+                                </div>
+                                <div class="flex-5 bb-s1 ml-1">
+                                    <div class="po-re">
+                                        <a href="商品详情.html">
+                                            <p class="fo-se-14 fo-co-6">[多多米家]会发光会说话手能动的大白 世界难题背带裤尖.</p>
+                                            <p class="fo-se-12 fo-co-4">颜色：白色</p>
+                                            <p class="fo-se-12 fo-co-4">型号：S</p>
+                                        </a>
+                                        <div class="controlS flex">
+                                            <div class="flex-1">
+                                                <div class="shopCarColAdd">
+                                                    <div class="le"></div>
+                                                    <div class="mi">1</div>
+                                                    <div class="ri"></div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-1 te-ri fo-se-15 fo-co-9">
+                                                ￥<span class="li_sprice">65.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--购物车列表 end-->
+    <!--删除结算 start-->
+    <div class="shopCarColIn">
+        <div class="flex pad1 body-back-12 di-no" id="shopCarCol1">
+            <div class="flex-2 te-le">
+                <div class="carAllCho"></div>
+                <span class="fo-se-17 fo-co-3 ve-mi">全选 <span class="fo-co-5" id="shopCarCount"></span></span>
+            </div>
+            <div class="flex-1">
+                <div class="form-control body-back-8 fo-co-5 fo-se-17" id="shopCarDel">删除</div>
+            </div>
+        </div>
+        <div class="flex pad1 body-back-12" id="shopCarCol2">
+            <div class="flex-2 te-le">
+                <div class="carAllCho"></div>
+                <span class="fo-se-17 fo-co-3 ve-mi">合计：<span class="fo-co-8" id="shopCarPrice"></span></span>
+            </div>
+            <div class="flex-1">
+                <a class="form-control body-back-11 fo-co-5 fo-se-17" href="确认订单.html">去结算</a>
+            </div>
+        </div>
+    </div>
+    <!--删除结算 end-->
+    <!--购物车-登录无商品ios start-->
+    <div class="pt-5 te-ce">
+        <p class="mt-5"><img src="images/icon-gouwun.png" alt="" style="width: 9rem;"/></p>
+        <p class="fo-se-15 fo-co-3 pad2">您的购物车还没有任何商品快去装满它！</p>
+        <a href="" class="form-control body-back-8 fo-se-17 wi-40 fo-co-5">去逛逛</a>
+    </div>
+    <!--购物车-登录无商品ios end-->
+    <!--购物车-未登录 start-->
+    <div class="pt-5 te-ce">
+        <p class="mt-5"><img src="images/icon-gouwun.png" alt="" style="width: 9rem;"/></p>
+        <p class="fo-se-15 fo-co-3 pad2">您的购物车还没有任何商品          是否立即登陆？</p>
+        <p class="fo-se-13 fo-co-4 pad2 pt-0">如有已添加商品，登陆后可查看</p>
+        <a href="" class="form-control body-back-8 fo-se-17 wi-40 fo-co-5">登录</a>
+        <a href="" class="form-control body-back-9 fo-se-17 wi-40 fo-co-5">注册</a>
+    </div>
+    <!--购物车-未登录 end-->
+    <!--为你精选 start-->
+    <div class="indexToChoose mb-12">
+        <img src="images/icon-titleShow1.png" alt="" width="100%" class="mt-2 mb-1"/>
+        <div class="l_sp">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="l_sptu">
+                            <img src="images/del-swi.jpg" alt=""/>
+                        </div>
+                        <div class="l_spmc">
+                            <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                            <span class="Smoney"><span class="Ssmell">￥</span>8.8</span>
+                            <p class="app_Code">已售2000</p>
+                        </div>
+                    </a>
+                </li><li>
+                <a href="">
+                    <div class="l_sptu">
+                        <img src="images/del-swi.jpg" alt=""/>
+                    </div>
+                    <div class="l_spmc">
+                        <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                        <span class="Smoney"><span class="Ssmell">￥</span>8.8</span>
+                        <p class="app_Code">已售2000</p>
+                    </div>
+                </a>
+            </li><li>
+                <a href="">
+                    <div class="l_sptu">
+                        <img src="images/del-swi.jpg" alt=""/>
+                    </div>
+                    <div class="l_spmc">
+                        <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                        <span class="Smoney"><span class="Ssmell">￥</span>8.8</span>
+                        <p class="app_Code">已售2000</p>
+                    </div>
+                </a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <!--为你精选 end-->
+    <!--底部导航 footer start-->
+    <ul class="footerList clearfix bo-sh-no">
+        <li>
+            <a href="index.html">
+                <p>
+                    <img src="images/footerListNo1.png" alt="" style="height: 2.6rem;" class="img1">
+                    <img src="images/footerListCur1.png" alt="" style="height: 2.6rem;" class="img2">
+                </p>
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="分类.html">
+                <p>
+                    <img src="images/footerListNo2.png" alt="" style="height: 2.6rem;" class="img1">
+                    <img src="images/footerListCur2.png" alt="" style="height: 2.6rem;" class="img2">
+                </p>
+                <p>分类</p>
+            </a>
+        </li>
+        <li>
+            <a href="客服.html">
+                <p>
+                    <img src="images/footerListNo3.png" alt="" style="height: 2.6rem;" class="img1">
+                    <img src="images/footerListCur3.png" alt="" style="height: 2.6rem;" class="img2">
+                </p>
+                <p>客服</p>
+            </a>
+        </li>
+        <li class="current">
+            <a href="购物车.html">
+                <p>
+                    <img src="images/footerListNo4.png" alt="" style="height: 2.6rem;" class="img1">
+                    <img src="images/footerListCur4.png" alt="" style="height: 2.6rem;" class="img2">
+                </p>
+                <p>购物车</p>
+            </a>
+        </li>
+        <li>
+            <a href="我的.html">
+                <p>
+                    <img src="images/footerListNo5.png" alt="" style="height: 2.6rem;" class="img1">
+                    <img src="images/footerListCur5.png" alt="" style="height: 2.6rem;" class="img2">
+                </p>
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+    <!--底部导航 footer end-->
+    <script type="text/javascript">
+//      操作商品数量
+        var carAdd = $('.shopCarColAdd');
+        carAdd.find('.ri').click(function(){
+            var mi=$(this).siblings('.mi');
+            var ht = parseInt(mi.html());
+            ht++;
+            mi.html(ht);
+            carEachFun();
+        });
+        carAdd.find('.le').click(function(){
+            var mi=$(this).siblings('.mi');
+            var ht = parseInt(mi.html());
+            if(ht>1){
+                ht--;
+                mi.html(ht);
+            }
+            carEachFun();
+        });
+//      选择商品操作
+        var cart = $(".ShoppingCart");
+        var carAllCho = $(".shopCarColIn .carAllCho");
+        var shopCarDel = $("#shopCarDel");
+        cart.each(function(){
+            var _this = $(this);
+            //      商家点击全选
+            _this.find(".ShopHead .carOneCho").click(function(){
+                var _ths = $(this);
+                var _hs = _ths.hasClass('active');
+                if(!_hs){
+                    _ths.addClass('active');
+                    _ths.parents('.ShopHead').siblings('.ShopUl').find('.carOneCho').addClass('active');
+                }else{
+                    _ths.removeClass('active');
+                    _ths.parents('.ShopHead').siblings('.ShopUl').find('.carOneCho').removeClass('active');
+                }
+                carEachFun();
+            });
+            //      单选
+            _this.find(".ShopUl .carOneCho").click(function(){
+                var _ths = $(this);
+                var _hs = _ths.hasClass('active');
+                if(!_hs){
+                    _ths.addClass('active');
+                }else{
+                    _ths.removeClass('active');
+                }
+                _ths.parents('.ShopHead').siblings('.ShopUl').find('.carOneCho').addClass('active');
+                var le = _ths.parents('.ShoppingCart').find('li').length;
+                var carLe = _ths.parents('.ShoppingCart').find('li .carOneCho');
+                var i = 0;
+                $.each(carLe,function(){
+                    var _ti =$(this);
+                    if(_ti.hasClass('active')){
+                        i++;
+                    }
+                });
+                if(le==i){
+                    _ths.parents('.ShopUl').siblings('.ShopHead').find('.carOneCho').addClass('active');
+                }else{
+                    _ths.parents('.ShopUl').siblings('.ShopHead').find('.carOneCho').removeClass('active');
+                }
+                carEachFun();
+            });
+        });
+        //点击编辑后
+        $(".tjAllHead .Bri").click(function(){
+            var _ths = $(this);
+            var _hs = _ths.hasClass('active');
+            var col1=$('#shopCarCol1');
+            var col2=$('#shopCarCol2');
+            if(!_hs){
+                _ths.addClass('active');
+                _ths.html('完成');
+                col1.removeClass('di-no');
+                col2.addClass('di-no');
+            }else{
+                _ths.removeClass('active');
+                _ths.html('编辑');
+                col1.addClass('di-no');
+                col2.removeClass('di-no');
+            }
+        });
+        //全选所有
+        carAllCho.click(function(){
+            var _ths = $(this);
+            var _hs = _ths.hasClass('active');
+            if(!_hs){
+                _ths.addClass('active');
+                cart.find('.carOneCho').addClass('active');
+            }else{
+                _ths.removeClass('active');
+                cart.find('.carOneCho').removeClass('active');
+            }
+            carEachFun();
+        });
+        //删除选中
+        shopCarDel.click(function(){
+            cart.find('li').each(function(){
+                var _this  =$(this);
+                var _has = _this.find('.carOneCho').hasClass('active');
+                if(_has){
+                    _this.remove();
+                }
+            });
+            cart.each(function(){
+                var _this  =$(this);
+                var len = _this.find('li').length;
+                if(len==0){
+                    _this.remove();
+                }
+            });
+            carEachFun();
+        });
+        //操作选中遍历
+        carEachFun();
+        function carEachFun(){
+            var le = cart.length;
+            var carLe = cart.find('.ShopHead .carOneCho');
+            var i = 0;
+            $.each(carLe,function(){
+                var _ti =$(this);
+                if(_ti.hasClass('active')){
+                    i++;
+                }
+            });
+            if(le==i){
+                carAllCho.addClass('active');
+            }else{
+                carAllCho.removeClass('active');
+            }
+            //计算选择的个数
+            var choShop = cart.find('.ShopUl .active').length;
+            $('#shopCarCount').html('（已选：'+choShop+'）');
+            //计算选择商品的总价格
+            var allPrice = 0;
+            cart.find('.ShopUl .active').each(function(){
+                var _this = $(this);
+                //商品价格
+                var price = _this.parents("li").find('.li_sprice').html();
+                //商品个数
+                var num = _this.parents("li").find('.shopCarColAdd .mi').html();
+                allPrice+=price*num;
+            });
+            $('#shopCarPrice').html("￥"+allPrice.toFixed(2));
+        }
+    </script>
+</body>
+</html>

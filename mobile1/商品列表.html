@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <!--阻止浏览器缓存-->
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <!-- Basic Page Needs
+     ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- js
+    ================================================== -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="body-back-10">
+    <!--顶部搜索 start-->
+    <div class="goodsListHead flex">
+        <a href="javascript:history.go(-1)">&nbsp;&nbsp;<img src="images/icon-return.png" style="width: 1.2rem;vertical-align: bottom;" alt=""></a>
+        <div class="flex-1">
+            <div class="classifyTop">
+                <a href="搜索.html"><input type="text" class="searchSim" placeholder="衣服"/></a>
+                <img src="images/icon-search.png" style="width: 1.5rem;" alt="" class="seLo"/>
+                <img src="images/icon-recording.png" alt="" style="width: 1.3rem;" class="recordLo"/>
+            </div>
+        </div>
+        <a href="#" class="mr-1 fo-se-15 fo-co-3">筛选</a>
+    </div>
+    <!--顶部搜索 end-->
+    <!--切换卡 start-->
+    <div class="goodsListTab flex">
+        <div class="flex-1 ml-1 fo-se-15">综合排序</div>
+        <div class="flex-1 fo-se-15">价格 <img src="images/icon-prixia.png" alt="" style="width: .8rem;"/></div>
+        <div class="flex-1 fo-se-15">销量 <img src="images/icon-prixia.png" alt="" style="width: .8rem;"/></div>
+        <a href="javascript:void (0)" class="mr-1 fo-se-15 fo-co-3" id="TabView"><img src="images/icon-TabView.png" alt="" style="width:1.8rem" /></a>
+    </div>
+    <!--切换卡 end-->
+    <!--列表 start-->
+    <div class="indexToChoose body-back-2 pt-1" id="TabViewCon">
+        <div class="l_sp">
+            <ul>
+                <li>
+                    <a href="商品详情.html" class="bo-1">
+                        <div class="l_sptu">
+                            <img src="images/del-swi.jpg" alt=""/>
+                        </div>
+                        <div class="l_spmc">
+                            <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                            <p><span class="Smoney"><span class="Ssmell">￥</span>8.8</span></p>
+                            <p class="pinjia">70人评价</p>
+                            <p class="app_Code">已售2000</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="商品详情.html" class="bo-1">
+                        <div class="l_sptu">
+                            <img src="images/del-swi.jpg" alt=""/>
+                        </div>
+                        <div class="l_spmc">
+                            <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                            <p><span class="Smoney"><span class="Ssmell">￥</span>8.8</span></p>
+                            <p class="pinjia">70人评价</p>
+                            <p class="app_Code">已售2000</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="商品详情.html" class="bo-1">
+                        <div class="l_sptu">
+                            <img src="images/del-swi.jpg" alt=""/>
+                        </div>
+                        <div class="l_spmc">
+                            <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                            <p><span class="Smoney"><span class="Ssmell">￥</span>8.8</span></p>
+                            <p class="pinjia">70人评价</p>
+                            <p class="app_Code">已售2000</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="商品详情.html" class="bo-1">
+                        <div class="l_sptu">
+                            <img src="images/del-swi.jpg" alt=""/>
+                        </div>
+                        <div class="l_spmc">
+                            <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                            <p><span class="Smoney"><span class="Ssmell">￥</span>8.8</span></p>
+                            <p class="pinjia">70人评价</p>
+                            <p class="app_Code">已售2000</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="商品详情.html" class="bo-1">
+                        <div class="l_sptu">
+                            <img src="images/del-swi.jpg" alt=""/>
+                        </div>
+                        <div class="l_spmc">
+                            <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                            <p><span class="Smoney"><span class="Ssmell">￥</span>8.8</span></p>
+                            <p class="pinjia">70人评价</p>
+                            <p class="app_Code">已售2000</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="商品详情.html" class="bo-1">
+                        <div class="l_sptu">
+                            <img src="images/del-swi.jpg" alt=""/>
+                        </div>
+                        <div class="l_spmc">
+                            <p class="til">新农哥 休闲零食 巴旦木/杏仁88克坚果休闲零食</p>
+                            <p><span class="Smoney"><span class="Ssmell">￥</span>8.8</span></p>
+                            <p class="pinjia">70人评价</p>
+                            <p class="app_Code">已售2000</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--列表 end-->
+    <!--返回顶部 start-->
+    <div class="allReturnTop"><img src="images/icon-returnTop1.png" alt="" style="width: 4.5rem;"/></div>
+    <!--返回顶部 end-->
+    <script type="text/javascript">
+//        操作切换效果代码 start
+        var tab = sessionStorage.se_TabView;
+        var TabViewCon = $('#TabViewCon');
+        var TabView = $('#TabView');
+        if(tab=='active'){
+            TabViewCon.addClass('active');
+            TabView.addClass('active');
+        }else{
+            TabViewCon.removeClass('active');
+            TabView.removeClass('active');
+        }
+        TabView.click(function(){
+            var _this = $(this);
+            var _has = _this.hasClass('active');
+            if(!_has){
+                _this.addClass('active');
+                TabViewCon.addClass('active');
+                sessionStorage.se_TabView="active";
+            }else{
+                _this.removeClass('active');
+                TabViewCon.removeClass('active');
+                sessionStorage.removeItem('se_TabView');
+            }
+        });
+//        操作切换效果代码 end
+    </script>
+</body>
+</html>

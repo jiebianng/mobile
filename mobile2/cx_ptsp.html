@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>普通店铺</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        body,ul,li,p,h3,h4,img,div{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+            list-style-type:none;
+        }
+        body{
+            padding-bottom: 3em;
+        }
+        a{
+            text-decoration: none;
+        }
+        .header img{
+            width: 100%;
+            height: auto;
+        }
+        .header{
+            background: url("public/images/nav.png");
+            background-size: cover;
+            height: 6em;
+            text-align: center;
+        }
+        .header_img2{
+            position: relative;
+            top: 3.8em;
+        }
+        .header_img3{
+            max-width:42%;
+            height: auto;
+            margin-top: -1em;
+        }
+        .header_img4{
+            max-width: 9%;
+            position: absolute;
+            left: 10%;
+            top: 4%;
+        }
+        .banner_sp img{
+            max-width: 100%;
+            height: auto;
+        }
+        .banner_sp{
+            position: relative;
+        }
+        .sp_3{
+            max-width: 55% !important;
+            position: absolute;
+            left: 45%;
+            top: 77.2%;
+        }
+        .banner_sp ul{
+            position: absolute;
+            top: 81%;
+            left: 51%;
+            width: 50%;
+        }
+        .banner_sp li{
+            float: left;
+            width: 33%;
+            text-align: center;
+        }
+        .banner_sp li img{
+            max-width: 40%;
+        }
+        .panel {
+             border-radius: 0px!important;
+            border: 1px solid #d1b59d!important;
+        }
+        .panel-default>.panel-heading {
+            color: #66442e!important;
+            background-color: #ffeddd!important;
+            border-color: #d1b59d!important;
+        }
+        .panel-title{
+            font-size: 1.8em!important;
+            font-weight: 600;
+        }
+        .panel-body{
+            background-color: #ffeddd;
+
+        }
+        .panel-body p{
+            color: #8b705a;
+        }
+        .body_news span{
+            color: #e76f16;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding-right: 0.5em;
+        }
+        .body_news p{
+            font-size: 1.5em;
+        }
+        .body_xinxi span{
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #e76f16;
+            padding-right: 0.2em;
+            position: relative;
+            top: 0.1em;
+        }
+        .body_xinxi p{
+            font-size: 1.5em;
+        }
+        .body_lcr p{
+            display: inline-block;
+            font-size: 1.3em;
+            color: #8b705a;
+            padding-top: 1em;
+
+        }
+        .body_lcr{
+            text-align: center;
+            padding: 0.5em;
+        }
+        .p_one{
+            float: left;
+        }
+        .p_three{
+            float: right;
+        }
+        .cx_ys{
+            padding-top: 0.5em;
+            display: none;
+        }
+        .cx_ys button{
+            background-color: #ffeddd;
+            border: 1px solid #fe8f33;
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+            font-size: 0.8em;
+            margin-left: 1em;
+            outline: none;
+            width: 28%;
+        }
+        .cx_ml{
+            margin-left: -0.8em;
+            padding-bottom: 0.5em;
+        }
+        .cx_active{
+            background-color: #e79d64 !important;
+        }
+        .cx_yh img{
+            max-width: 11%;
+            height: auto;
+            padding-right: 0.5em;
+            position: relative;
+            top: -0.2em;
+        }
+        .cx_yh{
+            font-size: 1.4em;
+        }
+        .cx_yh a{
+            color: #e76f16;
+        }
+        .cx_yh b{
+            color: #e76f16;
+        }
+        .media-left img{
+            width: 9em;
+            height: 6em;
+        }
+        .media{
+            background-color: #f0ddcd;
+            width: 100%;
+            padding: 0.6em;
+            padding-bottom: 0em;
+            color: #8b705a;
+        }
+        .cx_sbq{
+            float: right;
+            background-color: #f0ddcd;
+            font-size: 1.5em;
+            text-align: center;
+            padding-top: 1.5em;
+        }
+        .cx_sbq a{
+            text-decoration: none;
+            color: #8b705a;
+        }
+        .cx_swiper{
+            background-color: #ffeddd;
+            margin-top: -2em;
+            padding-bottom: 2.5em;
+            position: relative;
+            border-bottom: 1px solid  #bd987a;;
+
+        }
+        .cx_swiper h3{
+            float: left;
+            width: 33%;
+            font-size: 1.8em;
+        }
+        .cx_swiper span{
+            position: relative;
+            top: 0.24em;
+            left: -2.2em;
+            font-size: 2em;
+            border-bottom: 1px solid #ffeddd;
+            line-height: 0.3em;
+            margin-left: 4em;
+            opacity: 0;
+            color: #e76f16;
+        }
+        .swiper_head{
+            text-align: center;
+            color: #a18268;
+        }
+        .hx{
+            width: 100%;
+            border-top: 1px solid #bd987a;
+        }
+        .cx_hdcz img{
+            max-width: 100%;
+            height: auto;
+            margin-top: 1em;
+        }
+        .cx_hdcz{
+            padding: 0.8em;
+            padding-top: 1.5em;
+        }
+        .cx_weibu div{
+            width: 33.3%;
+            float: left;
+            text-align: center;
+            font-size: 1.6em;
+            height: 3em;
+            line-height: 3em;
+        }
+        .cx_weibu{
+            width: 100%;
+            position: fixed;
+            top: 92%;
+            z-index: 9999;
+        }
+        .weibu_one li{
+            background-color: #f9e7d7;
+            border: 1px solid #66442e;
+            width: 1.8em;
+            height: 1.8em;
+            float: left;
+            line-height: 1.8em;
+            color: #8b705a;
+
+        }
+        .weibu_one ul{
+            position: relative;
+            left: 0.7em;
+            top: 0.7em;
+        }
+        .weibu_two{
+            color: #8b705a;
+            font-weight: 600;
+        }
+        .weibu_three{
+            color: #ffeddd;
+            font-weight: 600;
+        }
+        .zhuke{
+            width: 100%;
+            border-bottom: 1px solid #bd987a;
+            line-height: 3em;
+            font-size: 1.8em;
+            color: #e76f16;
+            padding-left: 0.5em;
+        }
+        .same p{
+            font-size: 1.4em;
+            padding-left: 1em;
+            padding-top: 1em;
+            float: left;
+            color: #946549;
+        }
+        .same img{
+            width: 6em;
+            height: 6em;
+        }
+        .same li{
+            display: inline-block;
+            margin-left: 1.5em;
+        }
+        .same ul{
+            text-align: center;
+            margin-left: 2.2em;
+        }
+        .same{
+            border-bottom: 1px solid #bd987a;
+            padding-bottom: 2em;
+        }
+        .nsccc_span{
+            color: #ff7518;
+        }
+        .nsccc_p{
+            text-align: left;
+        }
+        .swiper-slide p{
+            font-size: 1.4em;
+            margin-top: 1em;
+            letter-spacing: 1px
+        }
+        .swiper-slide{
+            padding-left: 0.5em;
+
+
+        }
+    </style>
+</head>
+<body>
+<!--处理加载状态 start-->
+<div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+    <div style="display: table;width: 100%;height: 100%;">
+        <div style="display: table-cell;vertical-align: middle;">
+            <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var he = document.documentElement.clientHeight;//高
+    var _id = document.getElementById('PageLoadingState');
+    _id.style.height=he+'px';
+    document.onreadystatechange=function(){
+        if(document.readyState=='complete'){
+            document.getElementById('PageLoadingState').style.display='none';
+        }
+    }
+</script>
+<!--处理加载状态 end-->
+
+<!--顶部展示栏 start-->
+<div class="templates_Head" data-current="22" data-template="tj_all_index_head"></div>
+<!--顶部展示栏 end-->
+
+<div class="banner_sp mt-15">
+    <img src="upload/other/newsp1.jpg" alt=""/>
+    <img src="public/images/cx_44.png" alt=""/>
+    <img class="sp_3" src="public/images/cx_22.png" alt=""/>
+    <ul>
+        <li><img src="public/images/cx_33.png" alt=""/></li>
+        <li><img src="public/images/cx_33(1).png" alt=""/></li>
+        <li><img src="public/images/cx_33(2).png" alt=""/></li>
+    </ul>
+</div>
+
+<div class="container" style="margin-top: -0.3em">
+    <div class="row">
+        <div class="col-xs-12" style="padding: 0">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">藏谜星月菩提子108颗原籽正月高密佛珠手串男女情侣款手链配饰<a href="#cx_md"><span style="float: right;color: #f69248" class="glyphicon glyphicon-menu-right" aria-hidden="true"></a></span></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="body_news">
+                        <p><span>[推荐理由]</span>天然星月菩提 天然干磨顺白 原创设计 藏式风格</p>
+                    </div>
+                    <div class="body_xinxi">
+                        <p><span>¥ 228.00-780.00</span>（邮费：￥10.00）</p>
+                    </div>
+                    <div class="body_lcr">
+                        <p class="p_one">销量：123</p>
+                        <p class="p_two">发货地：重庆</p>
+                        <p class="p_three">库存：600件</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="margin-top: -2em">
+    <div class="row">
+        <div class="col-xs-12" style="padding: 0">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 style="color: #8b705a;font-size: 1.5em!important;" class="panel-title">
+                      选择 尺码 颜色分类
+                     <span style="float: right;color: #e76f16;" class="glyphicon glyphicon-menu-down cx_dj" aria-hidden="true"></span>
+                        <div class="cx_ys">
+                            <p>颜色</p>
+                            <div class="cx_ml">
+                                <button>红色</button>
+                                <button>红色</button>
+                                <button>红色</button>
+                            </div>
+                            <p>长度</p>
+                            <div class="cx_ml">
+                                <button>10cm</button>
+                                <button>10cm</button>
+                                <button>10cm</button>
+                            </div>
+                        </div>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <p class="cx_yh">
+                        <img src="public/images/cx_55.png" alt=""/>
+                        购买可获得 <b>10</b> 积分（<a href="#">什么是积分？</a>）
+                    </p>
+                </div>
+                <div class="media" style="margin-top: -1em">
+                    <div style="background-color: #f0ddcd;" class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="public/images/cx_66.png" alt="...">
+                        </a>
+                    </div>
+                    <div style="background-color: #f0ddcd;" class="media-body">
+                        <div  style="float: left;background-color:#f0ddcd ">
+                            <h4 style="background-color: #f0ddcd;" class="media-heading">藏家特色店</h4>
+                            <p style="background-color: #f0ddcd;margin-top: 3em;font-size: 1.2em">全部宝贝：100</p>
+                        </div>
+                        <div class="cx_sbq">
+                            <a href="#">进店逛逛</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cx_swiper">
+    <div class="swiper_head">
+        <h3>宝贝详情</h3>
+        <h3>购买须知</h3>
+        <h3>查看评论</h3>
+        <div style="clear: both"></div>
+        <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+    </div>
+    <div class="hx"></div>
+    <div class="cx_hdcz" id="cx_md">
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper" >
+                <div class="swiper-slide">
+                    <img src="upload/other/newsp4.jpg" alt="" width="100%"/>
+                </div>
+                <div class="swiper-slide">
+                    <p class="nsccc_p"><b class="nsccc_span">上市时间:</b> 2015年春季</p>
+                    <p class="nsccc_p"><b class="nsccc_span">是否商场同款:</b> 否</p>
+                    <p class="nsccc_p"><b class="nsccc_span">材质:</b> 情意绵绵8*10 情意绵绵6*8 情意绵绵7*9 情意绵绵5*7 似水年华5*7 似水年华6*8 似水年华7*9 似水年华8*10</p>
+                    <p class="nsccc_p"><b class="nsccc_span">品牌:</b>  藏谜</p>
+                    <p class="nsccc_p"><b class="nsccc_span">适用性别:</b> 情侣</p>
+                    <p class="nsccc_p"><b class="nsccc_span">图案:</b> 其他</p>
+                    <p class="nsccc_p"><b class="nsccc_span">风格:</b> 民族风</p>
+                    <p class="nsccc_p"><b class="nsccc_span">是否现货:</b> 现货</p>
+                    <p class="nsccc_p"><b class="nsccc_span">成色:</b> 全新</p>
+                    <p class="nsccc_p"><b class="nsccc_span">价格区间:</b> 501-800元</p>
+                    <p class="nsccc_p"><b class="nsccc_span">新奇特:</b> 新鲜出炉</p>
+                    <p class="nsccc_p"><b class="nsccc_span">货号:</b> PT-02</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide swiper-slide-active" style="width: 405px;">
+                        <div class="zhuke">
+                            住客点评：
+                        </div>
+                        <div class="same">
+                            <p style="font-weight: bold">王先生</p>
+                            <div>
+                                <div class="tj_all_xin_each" style="padding-top: 10px;">
+                                    <ul class="tj_all_xin clearfix">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                    <span class="_span">4.9分</span>
+                                </div>
+                                <p style="width: 80%">
+                                    酒店位置很好，到前台，发现服务很热情，非常贴心。服务标准应该是非
+                                </p>
+                                <ul >
+                                    <li><img src="upload/other/newsp2.jpg" alt=""></li>
+                                    <li><img src="upload/other/newsp3.jpg" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="cx_weibu">
+    <div class="weibu_one" style="background-color: #f9e7d7">
+        <ul>
+            <li class="cx_jian">-</li>
+            <li class="cx_sz">1</li>
+            <li class="cx_jia">+</li>
+        </ul>
+    </div>
+    <div class="weibu_two" style="background-color: #ebceb6">加入购物车</div>
+    <a href="cx_ddqr.html"><div class="weibu_three" style="background-color: #916252">立即购买</div></a>
+</div>
+
+
+
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+<script>
+    seajs.use("./public/templates/js/cx_ptsp",function(s){
+        s.fontcolor();
+        s.fontcolor1();
+        s.fontcolor2()
+    });
+    seajs.use("init",function(s){
+        s.tj_all_xin_each();
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>普通店铺</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        body,ul,li,p,h3,h4,img,div{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+            list-style-type:none;
+        }
+        body{
+            padding-bottom: 3em;
+        }
+        a{
+            text-decoration: none;
+        }
+        .header img{
+            width: 100%;
+            height: auto;
+        }
+        .header{
+            background: url("public/images/nav.png");
+            background-size: cover;
+            height: 6em;
+            text-align: center;
+        }
+        .header_img2{
+            position: relative;
+            top: 3.8em;
+        }
+        .header_img3{
+            max-width:42%;
+            height: auto;
+            margin-top: -1em;
+        }
+        .header_img4{
+            max-width: 9%;
+            position: absolute;
+            left: 10%;
+            top: 4%;
+        }
+        .banner_sp img{
+            max-width: 100%;
+            height: auto;
+        }
+        .banner_sp{
+            position: relative;
+        }
+        .cx_jd p{
+            color: #946549;
+            font-size: 1.5em;
+            font-weight: bold;
+            position: relative;
+        }
+        .cx_jd{
+            background-color: #f0ddcd;
+            margin-top: -0.2em;
+            box-shadow: 0px 1px 5px #946549;
+        }
+        .weibu_one{
+            padding-top: 1em;
+        }
+        .weibu_one li{
+            border: 1px solid #66442e;
+            width: 2em;
+            height: 2em;
+            display: inline-block;
+            line-height:1.8em;
+            color: #8b705a;
+            text-align: center;
+            margin-left: -0.3em;
+        }
+        .weibu_one ul{
+            float: right;
+            position: relative;
+            padding-right: 0.6em;
+        }
+        .weibu_one p{
+            float: left;
+            font-size: 1.4em;
+            color: #97897e;
+            font-weight: 400;
+            letter-spacing: 1px;
+            position: relative;
+            left: 1em;
+        }
+        .cx_yd{
+            background-color: #e2c0a3;
+            height: 5em;
+            line-height: 5em;
+            text-align: center;
+            color: #946549;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .cx_imgn img{
+            max-width: 55%;
+            width: 38px;
+            height: 18px;
+        }
+        .cx_imgn li{
+            display: inline-block;
+            margin-left: 0.5em;
+        }
+        .cx_imgn ul{
+            margin-left: -0.2em;
+        }
+        .cx_imgn{
+            background-color: #ffeddd;
+            text-align: center;
+            height: 5em;
+            line-height: 5em;
+            margin-top: 0.3em;
+            border-bottom: 1px solid #e4d4c5;
+
+        }
+        .cx_xxx{
+            border-bottom: 1px solid #e4d4c5;
+            background-color: #ffeddd;
+        }
+        .cx_xxx img{
+             float: left;
+             width: 10%;
+             position: relative;
+             top: 1em;
+        }
+        .cx_xxx p{
+            float: left;
+            width: 85%;
+            padding-left: 1em;
+            font-size: 1.4em;
+            color: #5d4b3c;
+        }
+        .ni{
+            font-size: 2em;
+            position: relative;
+            top: 0.3em!important;
+            color: #ff851c;
+        }
+        .cx_dianhua{
+            font-size: 2.8em;
+            color: #ff851c;
+            border-left:1px solid #e4d4c5;
+            height: 2.9em;
+            line-height: 2.9em;
+            text-align: center;
+        }
+        .cx_cjl img{
+            width: 7em;
+            height: 6em;
+            max-width: 100%;
+            float: left;
+        }
+        .cx_cjl{
+            background-color: #f0ddcd;
+            border-top: 1px solid #e4d4c5;
+        }
+        .cx_cjl p{
+            color: #5d4b3c;
+            font-size: 1.3em;
+            padding-left: 0.5em;
+        }
+        .pp{
+            float: left;
+        }
+        .cx_jdgg{
+            text-align: center;
+            color: #946549;
+            font-size: 1.5em;
+            font-weight: 600;
+            line-height: 5.3em;
+        }
+        .cx_swiper{
+            background-color: #ffeddd;
+            padding-bottom: 2.5em;
+            position: relative;
+            border-bottom: 1px solid  #bd987a;;
+
+        }
+        .cx_swiper h3{
+            float: left;
+            width: 33%;
+            font-size: 1.8em;
+        }
+        .cx_swiper span{
+            position: relative;
+            top: 0.24em;
+            left: -2.2em;
+            font-size: 2em;
+            border-bottom: 1px solid #ffeddd;
+            line-height: 0.3em;
+            margin-left: 4em;
+            opacity: 0;
+            color: #e76f16;
+        }
+        .swiper_head{
+            text-align: center;
+            color: #a18268;
+        }
+        .hx{
+            width: 100%;
+            border-top: 1px solid #bd987a;
+        }
+        .pd{
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        .pdd img{
+            max-width: 100%;
+            height: auto;
+            margin-top: 1em;
+        }
+        .pd h4{
+            color: #e76f16;
+            padding-top: 0.5em;
+        }
+        .pd li{
+
+            font-size: 1.5em;
+            margin-top: 1em;
+
+            color: #946549;
+        }
+        .pd b{
+            padding-right: 1em;
+
+        }
+        .mf{
+            color: #e76f16;
+            padding-left: 0.5em;
+        }
+        .zhuke{
+            width: 100%;
+            border-bottom: 1px solid #bd987a;
+            line-height: 3em;
+            font-size: 1.8em;
+            color: #e76f16;
+            padding-left: 0.5em;
+        }
+        .same p{
+            font-size: 1.4em;
+            padding-left: 1em;
+            padding-top: 1em;
+            float: left;
+            color: #946549;
+        }
+        .same img{
+            width: 6em;
+            height: 6em;
+        }
+        .same li{
+            display: inline-block;
+            margin-left: 1.5em;
+        }
+        .same ul{
+            text-align: center;
+            margin-left: 2.2em;
+        }
+        .same{
+            border-bottom: 1px solid #bd987a;
+            padding-bottom: 2em;
+        }
+    </style>
+</head>
+<body>
+<!--处理加载状态 start-->
+<div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+    <div style="display: table;width: 100%;height: 100%;">
+        <div style="display: table-cell;vertical-align: middle;">
+            <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var he = document.documentElement.clientHeight;//高
+    var _id = document.getElementById('PageLoadingState');
+    _id.style.height=he+'px';
+    document.onreadystatechange=function(){
+        if(document.readyState=='complete'){
+            document.getElementById('PageLoadingState').style.display='none';
+        }
+    }
+</script>
+<!--处理加载状态 end-->
+<!--顶部展示栏 start-->
+<div class="templates_Head" data-current="22" data-template="tj_all_index_head"></div>
+<!--顶部展示栏 end-->
+<div class="header">
+    <img src="public/images/8.11.png" alt=""/>
+    <img class="header_img2" src="public/images/8.11.png" alt=""/>
+    <img class="header_img3" src="public/images/cx_44%20(1).png" alt=""/>
+    <img class="header_img4" src="public/images/cx_44%20(2).png" alt=""/>
+</div>
+
+<div class="banner_sp">
+    <img src="upload/other/zs3.jpg" alt=""/>
+    <img src="public/images/cx_44.png" alt=""/>
+</div>
+<div class="container cx_jd">
+<div class="row">
+    <div class="col-xs-9">
+          <div class="col-xs-5" style="padding: 0;padding-top: 1em">
+              <p>单人大床房</p>
+              <p style="color: #e47b19">￥98</p>
+          </div>
+        <div class="col-xs-7" style="padding: 0">
+            <div class="weibu_one">
+                <p>数量</p>
+                <ul>
+                    <li class="cx_jian">-</li>
+                    <li class="cx_sz">1</li>
+                    <li class="cx_jia">+</li>
+                </ul>
+                <p>
+                    <span>共100间</span>
+                    <span>余50间</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3 cx_yd" style="padding: 0;background-color: #916252;color: #ffeddd;">
+        立即预定
+    </div>
+</div>
+</div>
+
+<div class="container cx_imgn">
+    <div class="row">
+        <div class="col-xs-12" style="padding: 0">
+            <ul>
+                <li><img src="public/images/cx_811.png" alt=""/></li>
+                <li><img src="public/images/cx_822.png" alt=""/></li>
+                <li><img src="public/images/cx_833.png" alt=""/></li>
+                <li><img src="public/images/cx_844.png" alt=""/></li>
+                <li><img src="public/images/cx_855.png" alt=""/></li>
+                <li><img src="public/images/cx_866.png" alt=""/></li>
+                <li><span class="glyphicon glyphicon-menu-right ni" aria-hidden="true"></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container cx_xxx">
+<div class="row">
+    <div class="col-xs-9" style="padding-top: 1em;">
+        <img src="public/images/cx_ditu.png" alt=""/>
+        <p>阿坝州理县古尔沟镇温泉路4号（古 尔沟温泉）
+            <span>>3km</span>
+        </p>
+    </div>
+    <div class="col-xs-3 cx_dianhua">
+        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+    </div>
+</div>
+</div>
+<div style="clear: both"></div>
+<div class="container cx_cjl">
+     <div class="row">
+         <div class="col-xs-9" style="padding-top: 1em;padding-bottom: 1em">
+             <img src="upload/other/ktv4.jpg" alt=""/>
+             <div class="pp">
+                 <p>藏家楼</p>
+                 <p>全部房间：100</p>
+             </div>
+         </div>
+         <div class="col-xs-3 cx_jdgg" style="padding: 0;border-left: 1px solid #CBB7A4;">
+             进店逛逛
+         </div>
+     </div>
+</div>
+<div class="cx_swiper">
+    <div class="swiper_head">
+        <h3 style="color: rgb(231, 111, 22);">宝贝详情</h3>
+        <h3>购买须知</h3>
+        <h3>查看评论</h3>
+        <div style="clear: both"></div>
+        <span class="glyphicon glyphicon-menu-up" aria-hidden="true" style="opacity: 1;"></span>
+        <span class="glyphicon glyphicon-menu-up" aria-hidden="true" style="opacity: 0;"></span>
+        <span class="glyphicon glyphicon-menu-up" aria-hidden="true" style="opacity: 0;"></span>
+    </div>
+    <div class="hx"></div>
+    <div class="cx_hdcz" id="cx_md">
+        <div class="swiper-container swiper-container-horizontal" data-swiper="[object Object]">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide-active pdd" style="width: 300px;">
+                    <img src="upload/other/zs1.jpg" alt=""/>
+                    <img src="upload/other/zs2.jpg" alt=""/>
+                </div>
+                <div class="swiper-slide swiper-slide-next pd" style="width: 300px;">
+                    <h4>酒店设施：</h4>
+                    <ul>
+                        <li><b>网络设施</b>有可无线上网的公共区域有可无线上网的公共区域 <b class="mf">免费</b></li>
+                        <li><b>停车场</b>停车场免费<b class="mf">免费</b></li>
+                    </ul>
+                    <h4>酒店政策：</h4>
+                    <ul>
+                        <li><b>网络设施</b>入住和离店   入住时间：14:00以后     离店时间：12:00以前 <b class="mf">免费</b></li>
+                        <li><b>宠物</b>不可携带宠物。</li>
+                    </ul>
+                    <h4>周边设施：</h4>
+                    <ul>
+                        <li><b>餐饮</b>宝马茶楼</li>
+                    </ul>
+                </div>
+                <div class="swiper-slide" style="width: 300px;">
+                    <div class="zhuke">
+                         住客点评：
+                    </div>
+                    <div class="same">
+                    <p style="font-weight: bold">王先生</p>
+                    <div>
+                        <p style="width: 80%">
+                            酒店位置很好，到前台，发现服务很热情，非常贴心。服务标准应该是非
+                            酒店位置很好，到前台，发现服务很热情，非常贴心。服务标准应该是非
+                        </p>
+                        <ul>
+                            <li><img src="upload/other/zs4.jpg" alt=""/></li>
+                            <li><img src="upload/other/zs5.jpg" alt=""/></li>
+                            <li><img src="upload/other/zs6.jpg" alt=""/></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+<script>
+    seajs.use("./public/templates/js/cx_ptsp",function(s){
+        s.fontcolor1();
+        s.fontcolor2()
+    });
+</script>
+
+</body>
+</html>

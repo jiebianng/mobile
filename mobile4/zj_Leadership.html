@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<div class="zjGm_hide">
+    <div class="zj_Leadership">
+        <div class="zj_Leadership_All_cont">
+            <h1>你的议程</h1>
+            <label>输入您的电话号码获取您的专属行程</label>
+            <input type="text" id="str" class="form-control input_phone" onfocus="$(this).val('')"/>
+            <a href="#" class="all-btn" onclick="IsDate()">登录查看议程</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function IsDate(){
+        var str = document.getElementById('str').value.trim();
+        if(str.length!=0){
+            var reg = /^1\d{10}$/;
+            var r = reg.test(str);
+            if(!r){
+                $("#str").addClass("color-danger").val("电话有误请重新输入");
+            }else{
+                $("#str").removeClass("color-danger");
+            }
+        }else{
+            $("#str").addClass("color-danger").val("电话不能为空");
+        }
+    }
+</script>
+</body>
+</html>

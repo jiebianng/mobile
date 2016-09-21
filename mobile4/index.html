@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/shake.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div class="zjGm_hide">
+        <div class="zjGm_yk_back">
+            <div class="zjGm_he_auto">
+                <div class="zjGm_yk_back_line">
+                    <div class="zjGm_yk_back_line_z"></div>
+                    <div class="zjGm_yk_back_cont">
+                        <img src="images/zj_game_map.jpg" alt="" class="zj_My_Vb_chest_img"/>
+                        <div class="zj_My_Vb_chest">
+                            <div class="s1 cur"></div>
+                            <div class="s2"></div>
+                            <div class="s3"></div>
+                            <div class="s4"></div>
+                            <div class="s5"></div>
+                            <div class="s6"></div>
+                            <div class="s7"></div>
+                            <div class="s8"></div>
+                            <div class="s9"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zjGm_header">
+                    <img src="images/zj_game_header.png" alt=""/>
+                </div>
+                <div class="zjGm_footer">
+                    <div class="img">
+                        <img src="images/zj_game_footer.png" alt="" width="100%"/>
+                        <a href="zj_Game_rules.html" class="zj_Game_rules" onfocus="this.blur()"></a>
+                        <a href="zj_My_treasure.html" class="zj_Game_Reasure_house" onfocus="this.blur()"></a>
+                    </div>
+                </div>
+                <div class="zj_say_content zj_say_content_cur">
+                    <img src="images/zj_say_content.png" alt="" width="100%"/>
+                    <a href="javascript:void (0)" class="zj_say_btn" onfocus="this.blur()"></a>
+                </div>
+            </div>
+        </div>
+        <div class="zj_popup">
+            <div class="zjGm_he_auto">
+                <div class="cont">
+                    <h2 class="h2">太厉害了！你找到一份宝藏</h2>
+                    <div class="baozhang"><img src="images/zj_popup_baozhang.png" alt="" width="100%"/></div>
+                    <div class="Dialog_box">
+                        <p class="p1">你开启了彤华宫的宝藏</p>
+                        <p> 1.西瓜子免费券一份</p>
+                        <p> 2.奇石代金券一份</p>
+                        <p> 1.西瓜子免费券一份</p>
+                        <p> 2.奇石代金券一份</p>
+                        <p> 1.西瓜子免费券一份</p>
+                        <p> 2.奇石代金券一份</p>
+                        <p> 1.西瓜子免费券一份</p>
+                        <p> 2.奇石代金券一份</p>
+                        <p> 1.西瓜子免费券一份</p>
+                        <p> 2.奇石代金券一份</p>
+                    </div>
+                    <div class="zj_game_xx"><img src="images/zj_game_xx.png" alt="" width="100%"/></div>
+                    <a href="#" class="link" onfocus="this.blur()"><img src="images/zj_game_link.png" alt="" width="100%"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(".zj_say_content .zj_say_btn").click(function(){
+            var has =$(this).parents(".zj_say_content").hasClass("zj_say_content_cur");
+            if(!has){
+                $(this).parents(".zj_say_content").addClass("zj_say_content_cur").animate({
+                    right:"0"
+                },200);
+            }else{
+                $(this).parents(".zj_say_content").removeClass("zj_say_content_cur").animate({
+                    right:"-54%"
+                },200);
+            }
+        });
+        $(".zj_popup .cont .zj_game_xx").click(function(){
+           $(this).parents(".zj_popup").hide();
+        });
+        setTimeout(function(){
+            var he =$(".zj_My_Vb_chest_img").height();
+            $(".zj_My_Vb_chest").css({
+                height: he+"px"
+            })
+        },100);
+        $(function(){
+                //create a new instance of shake.js.
+                var myShakeEvent = new Shake({
+                    threshold: 15
+                });
+
+                // start listening to device motion
+                myShakeEvent.start();
+
+                // register a shake event
+                window.addEventListener('shake', shakeEventDidOccur, false);
+
+                //shake event callback
+                function shakeEventDidOccur () {
+                    $(".zj_popup").css({
+                        "z-index": 1,
+                        "opacity": 1
+                    });
+//                    //put your own code here etc.
+//                    var arr = ['妹子一枚','福利图片一套','码农笔记一本','土豪金一台'];
+//                    var num = Math.floor(Math.random()*4);
+//                    alert("恭喜，摇得"+arr[num]+"！");
+                }
+        })
+    </script>
+</body>
+</html>

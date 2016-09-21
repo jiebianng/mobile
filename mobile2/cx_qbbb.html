@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>店铺上架</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metass
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        /*----------------------全局变量 start--------------------------*/
+        body{overflow-x:hidden;font-family:"微软雅黑";font-size: 1em;background: url("public/images/cx_bg.png");}
+        ul{list-style-type:none;margin:0;padding:0;}
+        a{text-decoration:none;}
+        /*----------------------全局变量 end--------------------------*/
+        .banner_left{
+            position: absolute;
+            top: 6.5em;
+            left: 1em;
+        }
+        .banner_left img{
+            float: left;
+            max-width: 35%;
+        }
+        .banner_left h4{
+            float: left;
+            color: #f5f5f5;
+            padding-left: 0.5em;
+            text-shadow: #373737 2px 3px 5px;
+        }
+        .banner_right p{
+            margin: 0;
+            padding: 0;
+            color: #e7d2bd;
+            font-size: 1.8em;
+        }
+        .banner_right{
+            position: absolute;
+            top: 7.5em;
+            left: 55%;
+            font-weight: 600;
+            border-left: 1px solid #e7d2bd;
+            padding-left: 1.5em;
+        }
+        .banner_right img{
+            float: left;
+            max-width: 50%;
+            height: auto;
+            padding-left: 1em;
+        }
+        .nav{
+            background: url("public/images/nav.png")no-repeat;
+            background-size: cover;
+            height: 6em;
+            text-align: center;
+            margin-top: -1.5em;
+        }
+        .nav_ul img{
+            height: 4.5em;
+            width: 5.5em;
+        }
+        .nav li{
+            float: left;
+            width: 33%;
+            line-height: 5.5em;
+            text-align: center;
+        }
+        .nav li img{
+            position: relative;
+            top: 0.6em;
+        }
+        #nav_only{
+            border-top: 2px solid #79563e;
+            width: 100%;
+        }
+        .caption p{
+            font-size: 1.4em;
+            letter-spacing: 1px;
+            color: #f5f5f5;
+        }
+        .caption h3{
+            margin: 0;
+            padding: 0;
+            color: #dc832e;
+        }
+        .thumbnail{
+            background-color: #e5cfba!important;
+            border: 1px solid #e5cfba!important;
+            margin-bottom: 0em!important;
+        }
+        hr{
+            margin-top:-0.5em!important;
+            margin-bottom: 0.5em!important;
+            border-top: 1px solid #b96e25 !important;
+        }
+        .cx_news{
+            padding-top: 1.5em;
+            margin-bottom: 30%;
+            display: none;
+        }
+        .banner_one{
+            max-width: 100%;
+            height: auto;
+        }
+        .cx_weibu{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .cx_hx{
+            box-shadow: 1px 1px 30px #252525;
+            position: relative;
+            top: 1em;
+            width: 100%;
+        }
+        .cx_footer{
+            background: url("public/images/nav.png")no-repeat;
+            background-size: cover;
+            height: 5em;
+            width: 100%;
+        }
+        .cx_footer ul li{
+            float: left;
+            text-align: center;
+            line-height: 5em;
+            margin-left: 0.5em;
+        }
+        .cx_footer img{
+            max-width: 110%;
+            height: auto;
+        }
+        .cx_banner{
+          margin-top: 4.5em;
+        }
+        /*.wei_div li{*/
+            /*line-height: 1.5em!important;*/
+            /*margin-left: 0em!important;*/
+            /*list-style: none;*/
+            /*font-size: 1.5em;*/
+            /*float: none!important;*/
+        /*}*/
+        /*.wei_div ol{*/
+            /*width: 100%;*/
+        /*}*/
+        /*.wei_div{*/
+            /*height: 10em;*/
+            /*background-color: #00a1cb;*/
+            /*float: none!important;*/
+
+        /*}*/
+
+    </style>
+</head>
+<body>
+<!--处理加载状态 start-->
+<div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+    <div style="display: table;width: 100%;height: 100%;">
+        <div style="display: table-cell;vertical-align: middle;">
+            <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var he = document.documentElement.clientHeight;//高
+    var _id = document.getElementById('PageLoadingState');
+    _id.style.height=he+'px';
+    document.onreadystatechange=function(){
+        if(document.readyState=='complete'){
+            document.getElementById('PageLoadingState').style.display='none';
+        }
+    }
+</script>
+<!--处理加载状态 end-->
+<!--顶部展示栏 start-->
+<div class="templates_Head" data-current="1" data-template="tj_all_index_headSearch"></div>
+<!--顶部展示栏 end-->
+<div class="cx_banner">
+    <img class="banner_one" src="public/images/8.111.png" alt="banner"/>
+    <img style="width: 100%" src="public/images/8.11.png" alt=""/>
+    <div class="banner_left">
+        <img src="public/images/left__01.png" alt=""/>
+        <h4>佛德缘</h4>
+    </div>
+    <div class="banner_right">
+        <div style="float: left">
+            <p>2025</p>
+            <p>粉丝数</p>
+        </div>
+        <img style="display: block" src="public/images/cx_z.png" alt=""/>
+    </div>
+</div>
+<div class="nav">
+    <ul class="nav_ul">
+        <li><img src="public/images/nav1.png" alt=""/></li>
+        <li><img src="public/images/nav2.png" alt=""/></li>
+        <li><img src="public/images/nav3.png" alt=""/></li>
+    </ul>
+    <img id="nav_only"  src="public/images/nav4.png" alt=""/>
+</div>
+
+<div class="cx_news">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6"style="padding: 0.5em">
+                <a href="cx_ptsp.html">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb1.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>牛角梳(传统的工艺手工精心制作)</p>
+                        <hr/>
+                        <h3>￥108.00</h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb2.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>七瓣大金刚菩提子手串天然高密度佛珠手链</p>
+                        <hr/>
+                        <h3>￥990.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb3.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>紫牙乌石榴石手链女款水晶手链</p>
+                        <hr/>
+                        <h3>￥336.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb4.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>石传百世 天然石榴石散珠手链串珠饰品</p>
+                        <hr/>
+                        <h3>￥289.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <a href="cx_ptsp.html">
+                    <div class="thumbnail">
+                        <img src="upload/other/qbbb5.jpg" alt="商品1">
+                        <div class="caption">
+                            <p>青金石明星款马本命年转运珠佛珠手镯</p>
+                            <hr/>
+                            <h3>￥389.00</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb6.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>民族风项链女大象吊坠毛衣链</p>
+                        <hr/>
+                        <h3>￥290.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb7.jpg" alt="商品1" width="100%">
+                    <div class="caption">
+                        <p>民族风藏族饰品手工原创金丝檀佛珠手串</p>
+                        <hr/>
+                        <h3>￥589.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb8.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>转运108佛珠手串男串珠手链</p>
+                        <hr/>
+                        <h3>￥669.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cx_news">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6"style="padding: 0.5em">
+                <a href="cx_ptsp.html">
+                    <div class="thumbnail">
+                        <img src="upload/other/qbbb1.jpg" alt="商品1">
+                        <div class="caption">
+                            <p>牛角梳(传统的工艺手工精心制作)</p>
+                            <hr/>
+                            <h3>￥108.00</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb2.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>七瓣大金刚菩提子手串天然高密度佛珠手链</p>
+                        <hr/>
+                        <h3>￥990.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb3.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>紫牙乌石榴石手链女款水晶手链</p>
+                        <hr/>
+                        <h3>￥336.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb4.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>石传百世 天然石榴石散珠手链串珠饰品</p>
+                        <hr/>
+                        <h3>￥289.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <a href="cx_ptsp.html">
+                    <div class="thumbnail">
+                        <img src="upload/other/qbbb5.jpg" alt="商品1">
+                        <div class="caption">
+                            <p>青金石明星款马本命年转运珠佛珠手镯</p>
+                            <hr/>
+                            <h3>￥389.00</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb6.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>民族风项链女大象吊坠毛衣链</p>
+                        <hr/>
+                        <h3>￥290.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb7.jpg" alt="商品1" width="100%">
+                    <div class="caption">
+                        <p>民族风藏族饰品手工原创金丝檀佛珠手串</p>
+                        <hr/>
+                        <h3>￥589.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb8.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>转运108佛珠手串男串珠手链</p>
+                        <hr/>
+                        <h3>￥669.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cx_news">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6"style="padding: 0.5em">
+                <a href="cx_ptsp.html">
+                    <div class="thumbnail">
+                        <img src="upload/other/qbbb1.jpg" alt="商品1">
+                        <div class="caption">
+                            <p>牛角梳(传统的工艺手工精心制作)</p>
+                            <hr/>
+                            <h3>￥108.00</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb2.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>七瓣大金刚菩提子手串天然高密度佛珠手链</p>
+                        <hr/>
+                        <h3>￥990.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb3.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>紫牙乌石榴石手链女款水晶手链</p>
+                        <hr/>
+                        <h3>￥336.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb4.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>石传百世 天然石榴石散珠手链串珠饰品</p>
+                        <hr/>
+                        <h3>￥289.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <a href="cx_ptsp.html">
+                    <div class="thumbnail">
+                        <img src="upload/other/qbbb5.jpg" alt="商品1">
+                        <div class="caption">
+                            <p>青金石明星款马本命年转运珠佛珠手镯</p>
+                            <hr/>
+                            <h3>￥389.00</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb6.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>民族风项链女大象吊坠毛衣链</p>
+                        <hr/>
+                        <h3>￥290.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb7.jpg" alt="商品1" width="100%">
+                    <div class="caption">
+                        <p>民族风藏族饰品手工原创金丝檀佛珠手串</p>
+                        <hr/>
+                        <h3>￥589.00</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6"style="padding: 0.5em">
+                <div class="thumbnail">
+                    <img src="upload/other/qbbb8.jpg" alt="商品1">
+                    <div class="caption">
+                        <p>转运108佛珠手串男串珠手链</p>
+                        <hr/>
+                        <h3>￥669.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cx_weibu">
+    <img class="cx_hx" src="public/images/8.11.png" alt=""/>
+<div class="cx_footer">
+    <ul style="width: 100%">
+        <li style="width: 30%">
+            <img src="public/images/cx_footer.png" alt=""/>
+        </li>
+        <li style="width: 30%"><img src="public/images/cx_footer1.png" alt=""/></li>
+        <li style="width: 30%"><img src="public/images/cx_footer2.png" alt=""/></li>
+    </ul>
+</div>
+</div>
+
+
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+
+<script>
+    seajs.use("./public/templates/js/cx_fenlei",function(s){
+        s.fontcolor2();
+        s.fontcolor3();
+    })
+</script>
+</body>
+</html>

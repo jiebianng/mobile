@@ -1,0 +1,22 @@
+<div class="tj_All_footer">
+    <img src="public/images/tj_All_footerDetails.jpg" alt="" width="100%" class="tj_All_footerDetails"/>
+    <div class="tj_all_poz tj_All_footerDetails_control">
+        <a href="javascript:void(0)"><img src="public/images/tj_all_btn_release.png" alt="" width="40%"/></a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    /**
+     *
+     * cur 1代表“添加我要发布按钮”
+     *
+     */
+    var _footerDetail=$('.templates_Footer');
+    var cur =parseInt(_footerDetail.attr("data-current"));
+    if(cur==1){
+        _footerDetail.find(".tj_All_footerDetails").attr({
+            "src":"public/images/tj_All_footerDetails2.jpg"
+        });
+        _footerDetail.find(".tj_all_poz").show();
+    }
+</script>

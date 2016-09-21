@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div class="zjGm_Scenic_spot_con">
+        <div class="titleImg">
+            <img src="images/Scenic_spot_top_03.jpg" alt="" width="100%"/>
+            <div class="zj_logo"></div>
+        </div>
+        <!--图片文字介绍-->
+        <div class="contMore">
+            <p class="p1">锦上花休闲山庄</p>
+            <p class="p2">尘嚣之外，一处宁静祥和之地，骏马白鸽梅花鹿在此欢聚，苗木花卉在此盛放芳彩，锦上花开，可缓缓归矣。</p>
+        </div>
+        <!--景点宝箱-->
+        <div class="title_model">
+            <img src="images/left_model.png" alt="" width="30%"/>
+            <label>景点宝箱</label>
+            <img src="images/right_model.png" alt="" width="30%"/>
+        </div>
+        <div class="All_model_cont">
+            <img src="images/zjGm_Scenic_spot_con_baoxiang.png" alt="" width="46" height="46"/>
+            <div class="All_model_cont_baoxiang">
+                <p>1.获得奇石折扣券</p>
+                <p>2.有机会获得西瓜汁抵扣券 </p>
+            </div>
+        </div>
+        <!--特色活动-->
+        <div class="title_model">
+            <img src="images/left_model.png" alt="" width="30%"/>
+            <label>特色活动</label>
+            <img src="images/right_model.png" alt="" width="30%"/>
+        </div>
+        <div class="All_model_cont">
+            <div class="feature">
+                <p>1、活动主题：缅怀英雄，珍惜当下。</p>
+                <p>2、活动时间：9：00-17；00</p>
+                <p>3、活动细则：展卖分为五部分，分别为葡萄、西瓜、挂面、奇石、丁红玉画展。</p>
+            </div>
+        </div>
+        <!--景点介绍-->
+        <div class="title_model">
+            <img src="images/left_model.png" alt="" width="30%"/>
+            <label>景点介绍</label>
+            <img src="images/right_model.png" alt="" width="30%"/>
+        </div>
+        <div class="All_model_cont">
+            <div class="suggest">
+                <img src="images/Scenic_spot_top_03.jpg" alt="" width="100%"/>
+                <p>英雄已逝，英魂未眠，黄继光纪念馆，位于魁山脚下御马河畔，全国百个爱国主义教育示范基地，用珍贵的文献资料和文物，教育并感染一代又一代人。</p>
+            </div>
+            <div class="suggest">
+                <img src="images/Scenic_spot_top_03.jpg" alt="" width="100%"/>
+                <p>英雄已逝，英魂未眠，黄继光纪念馆，位于魁山脚下御马河畔，全国百个爱国主义教育示范基地，用珍贵的文献资料和文物，教育并感染一代又一代人。</p>
+            </div>
+        </div>
+        <!--特色佳肴-->
+        <div class="title_model">
+            <img src="images/left_model.png" alt="" width="30%"/>
+            <label>特色佳肴</label>
+            <img src="images/right_model.png" alt="" width="30%"/>
+        </div>
+        <div class="All_model_cont">
+            <ul class="regale clearfix">
+                <li>
+                    <img src="images/Scenic_spot_top_03.jpg" alt="" width="100%"/>
+                    <p>韭香鹅脯</p>
+                </li>
+                <li>
+                    <img src="images/Scenic_spot_top_03.jpg" alt="" width="100%"/>
+                    <p>韭香鹅脯</p>
+                </li>
+                <li>
+                    <img src="images/Scenic_spot_top_03.jpg" alt="" width="100%"/>
+                    <p>韭香鹅脯</p>
+                </li>
+                <li>
+                    <img src="images/Scenic_spot_top_03.jpg" alt="" width="100%"/>
+                    <p>韭香鹅脯</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="zjGm_Scenic_spot_footer">
+        <a href="index.html" class="left">返回地图</a>
+        <a href="#" class="right">中江购</a>
+    </div>
+<script type="text/javascript">
+    function IsDate(){
+        var str = document.getElementById('str').value.trim();
+        if(str.length!=0){
+            var reg = /^1\d{10}$/;
+            var r = reg.test(str);
+            if(!r){
+                $("#str").addClass("color-danger").val("电话有误请重新输入");
+            }else{
+                $("#str").removeClass("color-danger");
+            }
+        }else{
+            $("#str").addClass("color-danger").val("电话不能为空");
+        }
+    }
+</script>
+</body>
+</html>

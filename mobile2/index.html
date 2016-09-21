@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title></title>
+    <!-- Basic Page Needs
+     ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏
+    ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面
+    ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metass
+    ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<body class="color_body">
+<!--处理加载状态 start-->
+    <div id="PageLoadingState" style="position: fixed;top: 0;left: 0;background-color: #efd8c0;width: 100%;z-index: 99999999;text-align: center;">
+        <div style="display: table;width: 100%;height: 100%;">
+            <div style="display: table-cell;vertical-align: middle;">
+                <img src="public/images/tj_all_loadfile.gif" alt="" width="12%"/>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var he = document.documentElement.clientHeight;//高
+        var _id = document.getElementById('PageLoadingState');
+        _id.style.height=he+'px';
+        document.onreadystatechange=function(){
+            if(document.readyState=='complete'){
+                document.getElementById('PageLoadingState').style.display='none';
+            }
+        }
+    </script>
+<!--处理加载状态 end-->
+    <!--顶部展示栏 start-->
+    <div class="templates_Head" data-current="1" data-template="tj_all_index_head"></div>
+    <!--顶部展示栏 end-->
+    <div class="index_weatherAll">
+        <style type="text/css">
+            .swiper-pagination{display: none;}
+        </style>
+        <!--处理轮播 start-->
+        <div class="tj_All_Carousel mt-15">
+        </div>
+        <!--处理轮播 end-->
+        <div class="tj_all_poz" style="height: 50px;bottom: 0;top: auto;">
+            <img src="" alt="" class="_weather1"/>
+            <span class="_weather2"></span>
+            <span class="_weather3"></span>
+            <a href="javascript:void (0)"  class="_weather4"><img src="public/images/tj_all_weather_ImgRele.png" alt="" width="100%"/></a>
+            <p class="_weather5"><a href="Map.html"><img src="public/images/tj_all_icon_Location2.png" alt="" height="100%"/></a><span></span></p>
+            <p class="_weather6"></p>
+        </div>
+    </div>
+    <div class="index_A_linkAll">
+        <img src="public/images/index_A_linkAll.jpg" alt="" width="100%"/>
+        <div class="tj_all_poz">
+            <a href="DeliciousFood.html" class="_a1"></a>
+            <a href="StopHotel.html" class="_a2"></a>
+            <a href="Traffic.html" class="_a3"></a>
+            <a href="Map.html" class="_a4"></a>
+            <a href="Store_list.html" class="_a5"></a>
+            <a href="TibetanCultureEntertainment.html" class="_a6"></a>
+        </div>
+    </div>
+    <div class="index_h3_headAll">
+        <img src="public/images/index_h3_headAll.png" alt="" width="100%"/>
+        <div class="tj_all_poz">
+            <img src="public/images/tj_top_head_s1.png" alt="" height="35%">
+            <img src="public/images/tj_top_head_t19.png" alt="" height="60%">
+            <img src="public/images/tj_top_head_s1.png" alt="" height="35%">
+        </div>
+    </div>
+    <div class="Traffic_ul_back">
+        <div class="News_activities_ul">
+            <img src="public/images/tj_All_timeShow_b_h3.png" alt="" width="60%">
+            <div class="tj_all_poz">
+                <span class="_span1">乡村文化旅游节</span>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <img src="public/images/Traffic_ul_liback.png" alt="" width="100%">
+                <div class="tj_all_poz">
+                    <a href="javascript:void (0)" class="_img"><img src="public/images/Traffic_ul_backLiIndex.jpg" alt="" width="100%"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="mb-32 mt-5">
+        <div class="index_h3_headAll mt-5">
+            <img src="public/images/index_h3_headAll.png" alt="" width="100%"/>
+            <div class="tj_all_poz">
+                <img src="public/images/tj_top_head_s1.png" alt="" height="35%">
+                <a href="TravelNotes.html"><img src="public/images/tj_top_head_t15.png" alt="" height="52%"></a>
+                <img src="public/images/tj_top_head_s1.png" alt="" height="35%">
+            </div>
+        </div>
+        <ul class="tj_all_videoListShow clearfix">
+            <li>
+                <img src="public/images/tj_All_Store_Li_contb_le.png" alt="" width="90%"/>
+                <div class="contLi">
+                    <img src="public/images/tj_All_CarouselLi1.jpg" alt="" height="100%"/>
+                </div>
+                <img src="public/images/tj_All_timeShow_b_h3.png" alt="" width="80%" class="tj_All_timeShow_b_h3_img"/>
+                <h3 class="tj_All_timeShow_b_h3">米亚罗</h3>
+            </li>
+            <li>
+                <img src="public/images/tj_All_Store_Li_contb_le.png" alt="" width="90%"/>
+                <div class="contLi">
+                    <img src="public/images/tj_All_CarouselLi1.jpg" alt="" height="100%"/>
+                </div>
+                <img src="public/images/tj_All_timeShow_b_h3.png" alt="" width="80%" class="tj_All_timeShow_b_h3_img"/>
+                <h3 class="tj_All_timeShow_b_h3">米亚罗</h3>
+            </li>
+            <li>
+                <img src="public/images/tj_All_Store_Li_contb_le.png" alt="" width="90%"/>
+                <div class="contLi">
+                    <img src="public/images/tj_All_CarouselLi1.jpg" alt="" height="100%"/>
+                </div>
+                <img src="public/images/tj_All_timeShow_b_h3.png" alt="" width="80%" class="tj_All_timeShow_b_h3_img"/>
+                <h3 class="tj_All_timeShow_b_h3">米亚罗</h3>
+            </li>
+        </ul>
+        <div class="index_h3_headAll">
+            <img src="public/images/index_h3_headAll.png" alt="" width="100%"/>
+            <div class="tj_all_poz">
+                <img src="public/images/tj_top_head_s1.png" alt="" height="35%">
+                <a href="LiCommunity.html"><img src="public/images/tj_top_head_t6.png" alt="" height="52%"></a>
+                <img src="public/images/tj_top_head_s1.png" alt="" height="35%">
+            </div>
+        </div>
+        <ul class="tj_all_videoListShow clearfix">
+            <li>
+                <img src="public/images/tj_All_Store_Li_contb_le.png" alt="" width="90%"/>
+                <div class="contLi">
+                    <img src="public/images/tj_All_CarouselLi1.jpg" alt="" height="100%"/>
+                </div>
+                <img src="public/images/tj_All_timeShow_b_h3.png" alt="" width="80%" class="tj_All_timeShow_b_h3_img"/>
+                <h3 class="tj_All_timeShow_b_h3">米亚罗</h3>
+            </li>
+            <li>
+                <img src="public/images/tj_All_Store_Li_contb_le.png" alt="" width="90%"/>
+                <div class="contLi">
+                    <img src="public/images/tj_All_CarouselLi1.jpg" alt="" height="100%"/>
+                </div>
+                <img src="public/images/tj_All_timeShow_b_h3.png" alt="" width="80%" class="tj_All_timeShow_b_h3_img"/>
+                <h3 class="tj_All_timeShow_b_h3">米亚罗</h3>
+            </li>
+            <li>
+                <img src="public/images/tj_All_Store_Li_contb_le.png" alt="" width="90%"/>
+                <div class="contLi">
+                    <img src="public/images/tj_All_CarouselLi1.jpg" alt="" height="100%"/>
+                </div>
+                <img src="public/images/tj_All_timeShow_b_h3.png" alt="" width="80%" class="tj_All_timeShow_b_h3_img"/>
+                <h3 class="tj_All_timeShow_b_h3">米亚罗</h3>
+            </li>
+        </ul>
+    </div>
+
+    <!--底部导航栏 start-->
+    <div class="templates_Footer" data-current="1" data-template="tj_All_footer"></div>
+    <!--底部导航栏 end-->
+<script type="text/javascript" src="public/js/sea.js"></script>
+<script type="text/javascript" src="public/js/seajs-css.js"></script>
+<script type="text/javascript" src="public/js/sea-text.js"></script>
+<script type="text/javascript" src="public/js/config.js"></script>
+<script type="text/javascript">
+    //    处理轮播
+    seajs.use("./public/templates/js/swiper.js",function(temp){
+        temp.tj_All_Carousel('page1');
+    });
+    seajs.use("./public/templates/control/index.js",function(temp){
+        temp.indexWeather();
+    });
+//    理县社区
+    seajs.use("./public/templates/control/LiCommunity.js",function(temp){
+        temp.ErgodicData2();
+    });
+//    热门攻略
+    seajs.use("./public/templates/control/TravelNotes.js",function(temp){
+        temp.ErgodicData3();
+    });
+</script>
+</body>
